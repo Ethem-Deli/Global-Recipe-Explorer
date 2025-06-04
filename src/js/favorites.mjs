@@ -1,5 +1,9 @@
-export function saveFavorite(recipe) {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favorites.push(recipe);
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+export function addFavorite(recipe) {
+    let saved = JSON.parse(localStorage.getItem("favorites")) || [];
+    saved.push(recipe);
+    localStorage.setItem("favorites", JSON.stringify(saved));
+}
+
+export function getFavorites() {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
 }

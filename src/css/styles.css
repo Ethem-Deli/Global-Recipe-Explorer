@@ -1,5 +1,209 @@
-@media (max-width: 600px) {
-    .recipe-card {
+/* Global Styles */
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #fdd835;
+    --background-color: #f4f4f4;
+    --text-color: black;
+    --light-text: #777;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0;  
+    padding: 0%;
+    font-weight: bold;
+
+}
+
+/* Navigation */
+nav.main-nav {
+    background-color: olivedrab;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    border-bottom: 2px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    
+}
+
+nav .hamburger {
+    font-size: 1.5em;
+    display: none;
+    cursor: pointer;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul.menu li a:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    nav .hamburger {
+        display: block;
+    }
+
+    nav ul.menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
+        background: #fff;
+        padding: 1em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.menu.show {
+        display: flex;
+    }
+}
+
+/* Flag Grid */
+.flag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    justify-items: center;
+}
+
+.flag-grid img.flag {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flag-grid img.flag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Forms */
+.form-container {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input,
+button {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+}
+
+#mission,
+#ads,
+#filters {
+    background: white;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+#ads img {
+    width: 150px;
+    margin: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Recipe Cards */
+.recipe-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .recipe-card {
+        width: 90%;
+    }
+}
+/* Title (logo) styles */
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: black;
+    text-decoration:dashed;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Responsive title font scaling */
+@media (max-width: 768px) {
+    .logo a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 1.2rem;
     }
 }

@@ -1,6 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="module" src="/src/js/main.js"></script>
-<link rel="stylesheet" href="/src/css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Recipe Explorer</title>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">Global Recipe Explorer</a>
+            </div>
+            <div class="hamburger">&#9776;</div>
+            <ul id="menu" class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="countries.html">Countries</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mission -->
+    <section id="mission">
+        <h2>Our Mission</h2>
+        <p>We help home cooks, cultural explorers, and health-conscious individuals explore global cuisine and
+            nutrition.</p>
+    </section>
+
+    <!-- Dietary Filter -->
+    <section id="filters">
+        <label for="dietFilter">Filter by Diet:</label>
+        <select id="dietFilter">
+            <option value="">Any</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten free">Gluten-Free</option>
+        </select>
+    </section>
+
+    <!-- Flag Grid -->
+    <section id="flag-section">
+        <h2>Explore by Country</h2>
+        <div id="flagGrid" class="flag-grid"></div>
+    </section>
+
+    <!-- Recipe Cards Placeholder -->
+    <section id="recipes">
+        <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
+    </section>
+
+    <!-- Advertisements -->
+    <section id="ads">
+        <h3>Sponsored</h3>
+        <img src="ad1.jpg" alt="Ad 1">
+        <img src="ad2.jpg" alt="Ad 2">
+    </section>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/home.mjs"></script>
+</body>
+
+</html>
