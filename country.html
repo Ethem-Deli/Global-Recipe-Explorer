@@ -2,21 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country Recipes</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Details</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
 </head>
 
 <body>
-    <header>
-        <h1 id="country-title">Recipes from </h1>
-    </header>
+    <nav class="main-nav">
+        <div class="logo"><a href="index.html">Global Recipe Explorer</a></div>
+        <div class="hamburger">&#9776;</div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="countries.html">Countries</a></li>
+        </ul>
+    </nav>
 
-    <section id="country-facts"></section>
-    <section id="country-recipes"></section>
+    <main id="country-details">
+        <h1 id="country-name">Loading...</h1>
+        <img id="country-flag" src="" alt="Country Flag" />
+        <p><strong>Capital:</strong> <span id="country-capital"></span></p>
+        <p><strong>Region:</strong> <span id="country-region"></span></p>
+        <p><strong>Population:</strong> <span id="country-population"></span></p>
+        <p><strong>Languages:</strong> <span id="country-languages"></span></p>
+        <p><strong>Currencies:</strong> <span id="country-currencies"></span></p>
+        <p><strong>Timezones:</strong> <span id="country-timezones"></span></p>
+        <!-- Add more fields as desired -->
+    </main>
 
-    <script type="module" src="/src/js/country.mjs"></script>
+    <script src="src/js/country.js" type="module"></script>
 </body>
 
 </html>

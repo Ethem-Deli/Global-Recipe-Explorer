@@ -44,10 +44,20 @@
         </select>
     </section>
 
-    <!-- Flag Grid -->
-    <section id="flag-section">
+    <!-- Country Dropdown -->
+    <section id="country-select">
         <h2>Explore by Country</h2>
-        <div id="flagGrid" class="flag-grid"></div>
+        <label for="countryDropdown">Choose a Country:</label>
+        <select id="countryDropdown">
+            <option value="">-- Select a country --</option>
+            <option value="italy.html">Italy</option>
+            <option value="japan.html">Japan</option>
+            <option value="mexico.html">Mexico</option>
+            <option value="india.html">India</option>
+            <option value="france.html">France</option>
+            <!-- Add more countries as needed -->
+        </select>
+        <button onclick="goToCountry()">Go</button>
     </section>
 
     <!-- Recipe Cards Placeholder -->
@@ -65,6 +75,17 @@
     <!-- Scripts -->
     <script type="module" src="/src/js/main.js"></script>
     <script type="module" src="/src/js/home.mjs"></script>
+    <script>
+        function goToCountry() {
+            const dropdown = document.getElementById('countryDropdown');
+            const selectedPage = dropdown.value;
+            if (selectedPage) {
+                window.location.href = selectedPage;
+            } else {
+                alert("Please select a country first.");
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+[
+    {
+        "code": "italy",
+        "name": "Italy",
+        "capital": "Rome",
+        "continent": "Europe",
+        "flag": "/assets/flags/italy.png",
+        "dishes": [
+            "Pizza Margherita",
+            "Pasta Carbonara",
+            "Tiramisu"
+        ],
+        "recipes": [
+            {
+                "title": "Pizza Margherita",
+                "image": "/assets/recipes/pizza.jpg",
+                "description": "Classic Italian pizza with fresh tomatoes, mozzarella, and basil.",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "code": "japan",
+        "name": "Japan",
+        "capital": "Tokyo",
+        "continent": "Asia",
+        "flag": "/assets/flags/japan.png",
+        "dishes": [
+            "Sushi",
+            "Ramen",
+            "Tempura"
+        ],
+        "recipes": [
+            {
+                "title": "Sushi",
+                "image": "/assets/recipes/sushi.jpg",
+                "description": "Delicate vinegared rice with fresh seafood and vegetables.",
+                "link": "#"
+            }
+        ]
+    }
+]

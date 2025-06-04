@@ -24,7 +24,7 @@ h3 {
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     text-align: center;
-    margin: 0;  
+    margin: 0;
     padding: 0%;
     font-weight: bold;
 
@@ -40,7 +40,7 @@ nav.main-nav {
     padding: 1em 2em;
     border-bottom: 2px solid #e0e0e0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    
+
 }
 
 nav .hamburger {
@@ -185,12 +185,13 @@ section {
         width: 90%;
     }
 }
+
 /* Title (logo) styles */
 .logo a {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: black;
-    text-decoration:dashed;
+    text-decoration: dashed;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -206,4 +207,29 @@ section {
     .logo a {
         font-size: 1.2rem;
     }
+}
+
+#country-details {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#country-details h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#country-details img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+#country-details p {
+    font-size: 1.1em;
+    margin: 0.5em 0;
 }
