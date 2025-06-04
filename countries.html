@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries - Global Recipe Explorer</title>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo"><a href="index.html">Global Recipe Explorer</a></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="countries.html">Countries</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="flag-section">
+        <h2>Select a Country</h2>
+        <div id="flagGrid" class="flag-grid">Loading...</div>
+    </section>
+
+    <script type="module">
+        const flagGrid = document.getElementById('flagGrid');
+
+        async function loadCountries() {
+            try {
+                const res = await fetch('https://restcountries.com/v3.1/all');
+                const data = await res.json();
+
+                // Filter for countries you want to support (optional)
+                const supportedCountries = ["Italy", "Japan", "Mexico", "India", "France"];
+                const filtered = data.filter(country =>
+                    supportedCountries.includes(country.name.common)
+                );
+
+                flagGrid.innerHTML = ""; // Clear loading text
+
+                filtered.forEach(country => {
+                    const code = country.name.common.toLowerCase();
+                    const flag = country.flags?.png || "";
+                    const card = document.createElement("a");
+                    card.href = `country.html?code=${code}`;
+                    card.className = "flag-card";
+                    card.innerHTML = `
+            <img src="${flag}" alt="Flag of ${country.name.common}">
+            <p>${country.name.common}</p>
+          `;
+                    flagGrid.appendChild(card);
+                });
+
+            } catch (error) {
+                flagGrid.innerHTML = "<p>Failed to load countries.</p>";
+                console.error("Error loading countries:", error);
+            }
+        }
+
+        loadCountries();
+    </script>
+</body>
+
+</html>

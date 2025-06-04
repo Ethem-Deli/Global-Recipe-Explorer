@@ -1,42 +1,2252 @@
 [
-    {
-        "code": "italy",
-        "name": "Italy",
-        "capital": "Rome",
-        "continent": "Europe",
-        "flag": "/assets/flags/italy.png",
-        "dishes": [
-            "Pizza Margherita",
-            "Pasta Carbonara",
-            "Tiramisu"
-        ],
-        "recipes": [
-            {
-                "title": "Pizza Margherita",
-                "image": "/assets/recipes/pizza.jpg",
-                "description": "Classic Italian pizza with fresh tomatoes, mozzarella, and basil.",
-                "link": "#"
-            }
-        ]
-    },
-    {
-        "code": "japan",
-        "name": "Japan",
-        "capital": "Tokyo",
-        "continent": "Asia",
-        "flag": "/assets/flags/japan.png",
-        "dishes": [
-            "Sushi",
-            "Ramen",
-            "Tempura"
-        ],
-        "recipes": [
-            {
-                "title": "Sushi",
-                "image": "/assets/recipes/sushi.jpg",
-                "description": "Delicate vinegared rice with fresh seafood and vegetables.",
-                "link": "#"
-            }
-        ]
-    }
+  {
+    "code": "mng",
+    "name": "Mongolia",
+    "capital": "Ulan Bator",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/mn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pan",
+    "name": "Panama",
+    "capital": "Panama City",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/pa.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ton",
+    "name": "Tonga",
+    "capital": "Nuku'alofa",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/to.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "com",
+    "name": "Comoros",
+    "capital": "Moroni",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/km.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "swe",
+    "name": "Sweden",
+    "capital": "Stockholm",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/se.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gin",
+    "name": "Guinea",
+    "capital": "Conakry",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/gn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "fji",
+    "name": "Fiji",
+    "capital": "Suva",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/fj.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sau",
+    "name": "Saudi Arabia",
+    "capital": "Riyadh",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/sa.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ncl",
+    "name": "New Caledonia",
+    "capital": "Nouméa",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/nc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cpv",
+    "name": "Cape Verde",
+    "capital": "Praia",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/cv.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cxr",
+    "name": "Christmas Island",
+    "capital": "Flying Fish Cove",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/cx.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "zaf",
+    "name": "South Africa",
+    "capital": "Pretoria",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/za.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "irn",
+    "name": "Iran",
+    "capital": "Tehran",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/ir.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "aze",
+    "name": "Azerbaijan",
+    "capital": "Baku",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/az.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "npl",
+    "name": "Nepal",
+    "capital": "Kathmandu",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/np.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lbn",
+    "name": "Lebanon",
+    "capital": "Beirut",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/lb.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "iot",
+    "name": "British Indian Ocean Territory",
+    "capital": "Diego Garcia",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/io.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ssd",
+    "name": "South Sudan",
+    "capital": "Juba",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ss.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "stp",
+    "name": "São Tomé and Príncipe",
+    "capital": "São Tomé",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/st.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mda",
+    "name": "Moldova",
+    "capital": "Chișinău",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/md.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "vir",
+    "name": "United States Virgin Islands",
+    "capital": "Charlotte Amalie",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/vi.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "rwa",
+    "name": "Rwanda",
+    "capital": "Kigali",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/rw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mne",
+    "name": "Montenegro",
+    "capital": "Podgorica",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/me.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "kgz",
+    "name": "Kyrgyzstan",
+    "capital": "Bishkek",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/kg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bdi",
+    "name": "Burundi",
+    "capital": "Gitega",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/bi.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "kir",
+    "name": "Kiribati",
+    "capital": "South Tarawa",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/ki.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "brb",
+    "name": "Barbados",
+    "capital": "Bridgetown",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bb.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "and",
+    "name": "Andorra",
+    "capital": "Andorra la Vella",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ad.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "kaz",
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/kz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "jor",
+    "name": "Jordan",
+    "capital": "Amman",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/jo.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mac",
+    "name": "Macau",
+    "capital": "",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/mo.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cyp",
+    "name": "Cyprus",
+    "capital": "Nicosia",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/cy.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "idn",
+    "name": "Indonesia",
+    "capital": "Jakarta",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/id.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "slv",
+    "name": "El Salvador",
+    "capital": "San Salvador",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/sv.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ala",
+    "name": "Åland Islands",
+    "capital": "Mariehamn",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ax.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "brn",
+    "name": "Brunei",
+    "capital": "Bandar Seri Begawan",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/bn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "wlf",
+    "name": "Wallis and Futuna",
+    "capital": "Mata-Utu",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/wf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "jpn",
+    "name": "Japan",
+    "capital": "Tokyo",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/jp.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "est",
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ee.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mnp",
+    "name": "Northern Mariana Islands",
+    "capital": "Saipan",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/mp.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "can",
+    "name": "Canada",
+    "capital": "Ottawa",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ca.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "atf",
+    "name": "French Southern and Antarctic Lands",
+    "capital": "Port-aux-Français",
+    "continent": "Antarctic",
+    "flag": "https://flagcdn.com/w320/tf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sjm",
+    "name": "Svalbard and Jan Mayen",
+    "capital": "Longyearbyen",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/sj.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "are",
+    "name": "United Arab Emirates",
+    "capital": "Abu Dhabi",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/ae.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bwa",
+    "name": "Botswana",
+    "capital": "Gaborone",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/bw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mrt",
+    "name": "Mauritania",
+    "capital": "Nouakchott",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/mr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "esh",
+    "name": "Western Sahara",
+    "capital": "El Aaiún",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/eh.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gum",
+    "name": "Guam",
+    "capital": "Hagåtña",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/gu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mdg",
+    "name": "Madagascar",
+    "capital": "Antananarivo",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/mg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lao",
+    "name": "Laos",
+    "capital": "Vientiane",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/la.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "som",
+    "name": "Somalia",
+    "capital": "Mogadishu",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/so.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "hti",
+    "name": "Haiti",
+    "capital": "Port-au-Prince",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ht.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "flk",
+    "name": "Falkland Islands",
+    "capital": "Stanley",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/fk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cze",
+    "name": "Czechia",
+    "capital": "Prague",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/cz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bhs",
+    "name": "Bahamas",
+    "capital": "Nassau",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bs.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mlt",
+    "name": "Malta",
+    "capital": "Valletta",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/mt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mus",
+    "name": "Mauritius",
+    "capital": "Port Louis",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/mu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pak",
+    "name": "Pakistan",
+    "capital": "Islamabad",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/pk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sdn",
+    "name": "Sudan",
+    "capital": "Khartoum",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/sd.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lva",
+    "name": "Latvia",
+    "capital": "Riga",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/lv.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ltu",
+    "name": "Lithuania",
+    "capital": "Vilnius",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/lt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "prt",
+    "name": "Portugal",
+    "capital": "Lisbon",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/pt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lux",
+    "name": "Luxembourg",
+    "capital": "Luxembourg",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/lu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mkd",
+    "name": "North Macedonia",
+    "capital": "Skopje",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/mk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sgs",
+    "name": "South Georgia",
+    "capital": "King Edward Point",
+    "continent": "Antarctic",
+    "flag": "https://flagcdn.com/w320/gs.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "srb",
+    "name": "Serbia",
+    "capital": "Belgrade",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/rs.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gbr",
+    "name": "United Kingdom",
+    "capital": "London",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/gb.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tkl",
+    "name": "Tokelau",
+    "capital": "Fakaofo",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/tk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ken",
+    "name": "Kenya",
+    "capital": "Nairobi",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ke.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ner",
+    "name": "Niger",
+    "capital": "Niamey",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ne.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cog",
+    "name": "Republic of the Congo",
+    "capital": "Brazzaville",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/cg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cub",
+    "name": "Cuba",
+    "capital": "Havana",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/cu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "swz",
+    "name": "Eswatini",
+    "capital": "Mbabane",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/sz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "alb",
+    "name": "Albania",
+    "capital": "Tirana",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/al.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mli",
+    "name": "Mali",
+    "capital": "Bamako",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ml.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tgo",
+    "name": "Togo",
+    "capital": "Lomé",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/tg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "rou",
+    "name": "Romania",
+    "capital": "Bucharest",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ro.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "omn",
+    "name": "Oman",
+    "capital": "Muscat",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/om.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "egy",
+    "name": "Egypt",
+    "capital": "Cairo",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/eg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nzl",
+    "name": "New Zealand",
+    "capital": "Wellington",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/nz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "rus",
+    "name": "Russia",
+    "capital": "Moscow",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ru.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tkm",
+    "name": "Turkmenistan",
+    "capital": "Ashgabat",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/tm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cmr",
+    "name": "Cameroon",
+    "capital": "Yaoundé",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/cm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cok",
+    "name": "Cook Islands",
+    "capital": "Avarua",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/ck.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "svn",
+    "name": "Slovenia",
+    "capital": "Ljubljana",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/si.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "vut",
+    "name": "Vanuatu",
+    "capital": "Port Vila",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/vu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "kna",
+    "name": "Saint Kitts and Nevis",
+    "capital": "Basseterre",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/kn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ury",
+    "name": "Uruguay",
+    "capital": "Montevideo",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/uy.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "dnk",
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/dk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "phl",
+    "name": "Philippines",
+    "capital": "Manila",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/ph.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pse",
+    "name": "Palestine",
+    "capital": "Ramallah",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/ps.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pcn",
+    "name": "Pitcairn Islands",
+    "capital": "Adamstown",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/pn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "guf",
+    "name": "French Guiana",
+    "capital": "Cayenne",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/gf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ita",
+    "name": "Italy",
+    "capital": "Rome",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/it.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "uzb",
+    "name": "Uzbekistan",
+    "capital": "Tashkent",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/uz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "dma",
+    "name": "Dominica",
+    "capital": "Roseau",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/dm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "fin",
+    "name": "Finland",
+    "capital": "Helsinki",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/fi.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "kor",
+    "name": "South Korea",
+    "capital": "Seoul",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/kr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "hmd",
+    "name": "Heard Island and McDonald Islands",
+    "capital": "",
+    "continent": "Antarctic",
+    "flag": "https://flagcdn.com/w320/hm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "fro",
+    "name": "Faroe Islands",
+    "capital": "Tórshavn",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/fo.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "qat",
+    "name": "Qatar",
+    "capital": "Doha",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/qa.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ind",
+    "name": "India",
+    "capital": "New Delhi",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/in.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "myt",
+    "name": "Mayotte",
+    "capital": "Mamoudzou",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/yt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "glp",
+    "name": "Guadeloupe",
+    "capital": "Basse-Terre",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/gp.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "moz",
+    "name": "Mozambique",
+    "capital": "Maputo",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/mz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bvt",
+    "name": "Bouvet Island",
+    "capital": "",
+    "continent": "Antarctic",
+    "flag": "https://flagcdn.com/w320/bv.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "yem",
+    "name": "Yemen",
+    "capital": "Sana'a",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/ye.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "unk",
+    "name": "Kosovo",
+    "capital": "Pristina",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/xk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "twn",
+    "name": "Taiwan",
+    "capital": "Taipei",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/tw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bmu",
+    "name": "Bermuda",
+    "capital": "Hamilton",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "geo",
+    "name": "Georgia",
+    "capital": "Tbilisi",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/ge.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "aia",
+    "name": "Anguilla",
+    "capital": "The Valley",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ai.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "vct",
+    "name": "Saint Vincent and the Grenadines",
+    "capital": "Kingstown",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/vc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "blz",
+    "name": "Belize",
+    "capital": "Belmopan",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mwi",
+    "name": "Malawi",
+    "capital": "Lilongwe",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/mw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "abw",
+    "name": "Aruba",
+    "capital": "Oranjestad",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/aw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "isr",
+    "name": "Israel",
+    "capital": "Jerusalem",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/il.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "imn",
+    "name": "Isle of Man",
+    "capital": "Douglas",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/im.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "blr",
+    "name": "Belarus",
+    "capital": "Minsk",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/by.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nam",
+    "name": "Namibia",
+    "capital": "Windhoek",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/na.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gtm",
+    "name": "Guatemala",
+    "capital": "Guatemala City",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/gt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bra",
+    "name": "Brazil",
+    "capital": "Brasília",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/br.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pol",
+    "name": "Poland",
+    "capital": "Warsaw",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/pl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mdv",
+    "name": "Maldives",
+    "capital": "Malé",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/mv.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sgp",
+    "name": "Singapore",
+    "capital": "Singapore",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/sg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "grl",
+    "name": "Greenland",
+    "capital": "Nuuk",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/gl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "guy",
+    "name": "Guyana",
+    "capital": "Georgetown",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/gy.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "prk",
+    "name": "North Korea",
+    "capital": "Pyongyang",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/kp.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "irl",
+    "name": "Ireland",
+    "capital": "Dublin",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ie.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "slb",
+    "name": "Solomon Islands",
+    "capital": "Honiara",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/sb.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gib",
+    "name": "Gibraltar",
+    "capital": "Gibraltar",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/gi.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mhl",
+    "name": "Marshall Islands",
+    "capital": "Majuro",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/mh.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tun",
+    "name": "Tunisia",
+    "capital": "Tunis",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/tn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tuv",
+    "name": "Tuvalu",
+    "capital": "Funafuti",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/tv.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sxm",
+    "name": "Sint Maarten",
+    "capital": "Philipsburg",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/sx.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "eri",
+    "name": "Eritrea",
+    "capital": "Asmara",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/er.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "wsm",
+    "name": "Samoa",
+    "capital": "Apia",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/ws.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "dom",
+    "name": "Dominican Republic",
+    "capital": "Santo Domingo",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/do.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "uga",
+    "name": "Uganda",
+    "capital": "Kampala",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ug.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "irq",
+    "name": "Iraq",
+    "capital": "Baghdad",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/iq.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ukr",
+    "name": "Ukraine",
+    "capital": "Kyiv",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ua.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lbr",
+    "name": "Liberia",
+    "capital": "Monrovia",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/lr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "hkg",
+    "name": "Hong Kong",
+    "capital": "City of Victoria",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/hk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nru",
+    "name": "Nauru",
+    "capital": "Yaren",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/nr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lie",
+    "name": "Liechtenstein",
+    "capital": "Vaduz",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/li.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "esp",
+    "name": "Spain",
+    "capital": "Madrid",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/es.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tur",
+    "name": "Turkey",
+    "capital": "Ankara",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/tr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "umi",
+    "name": "United States Minor Outlying Islands",
+    "capital": "Washington DC",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/um.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "deu",
+    "name": "Germany",
+    "capital": "Berlin",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/de.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "syc",
+    "name": "Seychelles",
+    "capital": "Victoria",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/sc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "aus",
+    "name": "Australia",
+    "capital": "Canberra",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/au.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bgr",
+    "name": "Bulgaria",
+    "capital": "Sofia",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/bg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "dza",
+    "name": "Algeria",
+    "capital": "Algiers",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/dz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ago",
+    "name": "Angola",
+    "capital": "Luanda",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ao.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "per",
+    "name": "Peru",
+    "capital": "Lima",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/pe.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "chl",
+    "name": "Chile",
+    "capital": "Santiago",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/cl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nic",
+    "name": "Nicaragua",
+    "capital": "Managua",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ni.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "zwe",
+    "name": "Zimbabwe",
+    "capital": "Harare",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/zw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "jey",
+    "name": "Jersey",
+    "capital": "Saint Helier",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/je.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ben",
+    "name": "Benin",
+    "capital": "Porto-Novo",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/bj.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "col",
+    "name": "Colombia",
+    "capital": "Bogotá",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/co.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "aut",
+    "name": "Austria",
+    "capital": "Vienna",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/at.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bhr",
+    "name": "Bahrain",
+    "capital": "Manama",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/bh.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mar",
+    "name": "Morocco",
+    "capital": "Rabat",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ma.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tza",
+    "name": "Tanzania",
+    "capital": "Dodoma",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/tz.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "grd",
+    "name": "Grenada",
+    "capital": "St. George's",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/gd.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "vgb",
+    "name": "British Virgin Islands",
+    "capital": "Road Town",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/vg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "smr",
+    "name": "San Marino",
+    "capital": "City of San Marino",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/sm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ven",
+    "name": "Venezuela",
+    "capital": "Caracas",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ve.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gnb",
+    "name": "Guinea-Bissau",
+    "capital": "Bissau",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/gw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nfk",
+    "name": "Norfolk Island",
+    "capital": "Kingston",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/nf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "isl",
+    "name": "Iceland",
+    "capital": "Reykjavik",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/is.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "msr",
+    "name": "Montserrat",
+    "capital": "Plymouth",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ms.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "usa",
+    "name": "United States",
+    "capital": "Washington, D.C.",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/us.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tto",
+    "name": "Trinidad and Tobago",
+    "capital": "Port of Spain",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/tt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "fra",
+    "name": "France",
+    "capital": "Paris",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/fr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mtq",
+    "name": "Martinique",
+    "capital": "Fort-de-France",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/mq.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cri",
+    "name": "Costa Rica",
+    "capital": "San José",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/cr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bel",
+    "name": "Belgium",
+    "capital": "Brussels",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/be.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "maf",
+    "name": "Saint Martin",
+    "capital": "Marigot",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/mf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "png",
+    "name": "Papua New Guinea",
+    "capital": "Port Moresby",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/pg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "fsm",
+    "name": "Micronesia",
+    "capital": "Palikir",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/fm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "atg",
+    "name": "Antigua and Barbuda",
+    "capital": "Saint John's",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ag.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "khm",
+    "name": "Cambodia",
+    "capital": "Phnom Penh",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/kh.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "jam",
+    "name": "Jamaica",
+    "capital": "Kingston",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/jm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sur",
+    "name": "Suriname",
+    "capital": "Paramaribo",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/sr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "zmb",
+    "name": "Zambia",
+    "capital": "Lusaka",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/zm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "arm",
+    "name": "Armenia",
+    "capital": "Yerevan",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/am.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tca",
+    "name": "Turks and Caicos Islands",
+    "capital": "Cockburn Town",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/tc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gab",
+    "name": "Gabon",
+    "capital": "Libreville",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ga.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "vnm",
+    "name": "Vietnam",
+    "capital": "Hanoi",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/vn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "dji",
+    "name": "Djibouti",
+    "capital": "Djibouti",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/dj.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ggy",
+    "name": "Guernsey",
+    "capital": "St. Peter Port",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/gg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "shn",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "capital": "Jamestown",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/sh.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "grc",
+    "name": "Greece",
+    "capital": "Athens",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/gr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pyf",
+    "name": "French Polynesia",
+    "capital": "Papeetē",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/pf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "kwt",
+    "name": "Kuwait",
+    "capital": "Kuwait City",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/kw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sle",
+    "name": "Sierra Leone",
+    "capital": "Freetown",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/sl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ata",
+    "name": "Antarctica",
+    "capital": "",
+    "continent": "Antarctic",
+    "flag": "https://flagcdn.com/w320/aq.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "hnd",
+    "name": "Honduras",
+    "capital": "Tegucigalpa",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/hn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mex",
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/mx.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nga",
+    "name": "Nigeria",
+    "capital": "Abuja",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ng.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lby",
+    "name": "Libya",
+    "capital": "Tripoli",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ly.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tha",
+    "name": "Thailand",
+    "capital": "Bangkok",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/th.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "caf",
+    "name": "Central African Republic",
+    "capital": "Bangui",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/cf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pry",
+    "name": "Paraguay",
+    "capital": "Asunción",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/py.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tls",
+    "name": "Timor-Leste",
+    "capital": "Dili",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/tl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "asm",
+    "name": "American Samoa",
+    "capital": "Pago Pago",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/as.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "sen",
+    "name": "Senegal",
+    "capital": "Dakar",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/sn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "reu",
+    "name": "Réunion",
+    "capital": "Saint-Denis",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/re.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lca",
+    "name": "Saint Lucia",
+    "capital": "Castries",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/lc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "afg",
+    "name": "Afghanistan",
+    "capital": "Kabul",
+    "continent": "Asia",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "btn",
+    "name": "Bhutan",
+    "capital": "Thimphu",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/bt.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mmr",
+    "name": "Myanmar",
+    "capital": "Naypyidaw",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/mm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gnq",
+    "name": "Equatorial Guinea",
+    "capital": "Malabo",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/gq.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cck",
+    "name": "Cocos (Keeling) Islands",
+    "capital": "West Island",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/cc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "syr",
+    "name": "Syria",
+    "capital": "Damascus",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/sy.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "hrv",
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/hr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "pri",
+    "name": "Puerto Rico",
+    "capital": "San Juan",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/pr.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bes",
+    "name": "Caribbean Netherlands",
+    "capital": "Kralendijk",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bq.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bol",
+    "name": "Bolivia",
+    "capital": "Sucre",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bo.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "spm",
+    "name": "Saint Pierre and Miquelon",
+    "capital": "Saint-Pierre",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/pm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cod",
+    "name": "DR Congo",
+    "capital": "Kinshasa",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/cd.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "arg",
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ar.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lka",
+    "name": "Sri Lanka",
+    "capital": "Sri Jayawardenepura Kotte",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/lk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tcd",
+    "name": "Chad",
+    "capital": "N'Djamena",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/td.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cuw",
+    "name": "Curaçao",
+    "capital": "Willemstad",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/cw.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "ecu",
+    "name": "Ecuador",
+    "capital": "Quito",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ec.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "lso",
+    "name": "Lesotho",
+    "capital": "Maseru",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ls.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gmb",
+    "name": "Gambia",
+    "capital": "Banjul",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/gm.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "svk",
+    "name": "Slovakia",
+    "capital": "Bratislava",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/sk.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mys",
+    "name": "Malaysia",
+    "capital": "Kuala Lumpur",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/my.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nor",
+    "name": "Norway",
+    "capital": "Oslo",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/no.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "gha",
+    "name": "Ghana",
+    "capital": "Accra",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/gh.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "che",
+    "name": "Switzerland",
+    "capital": "Bern",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ch.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "hun",
+    "name": "Hungary",
+    "capital": "Budapest",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/hu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "vat",
+    "name": "Vatican City",
+    "capital": "Vatican City",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/va.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "nld",
+    "name": "Netherlands",
+    "capital": "Amsterdam",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/nl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bfa",
+    "name": "Burkina Faso",
+    "capital": "Ouagadougou",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/bf.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bgd",
+    "name": "Bangladesh",
+    "capital": "Dhaka",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/bd.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "niu",
+    "name": "Niue",
+    "capital": "Alofi",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/nu.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "civ",
+    "name": "Ivory Coast",
+    "capital": "Yamoussoukro",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/ci.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "mco",
+    "name": "Monaco",
+    "capital": "Monaco",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/mc.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "cym",
+    "name": "Cayman Islands",
+    "capital": "George Town",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/ky.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "eth",
+    "name": "Ethiopia",
+    "capital": "Addis Ababa",
+    "continent": "Africa",
+    "flag": "https://flagcdn.com/w320/et.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "tjk",
+    "name": "Tajikistan",
+    "capital": "Dushanbe",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/tj.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "bih",
+    "name": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w320/ba.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "blm",
+    "name": "Saint Barthélemy",
+    "capital": "Gustavia",
+    "continent": "Americas",
+    "flag": "https://flagcdn.com/w320/bl.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "chn",
+    "name": "China",
+    "capital": "Beijing",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w320/cn.png",
+    "dishes": [],
+    "recipes": []
+  },
+  {
+    "code": "plw",
+    "name": "Palau",
+    "capital": "Ngerulmud",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w320/pw.png",
+    "dishes": [],
+    "recipes": []
+  }
 ]
