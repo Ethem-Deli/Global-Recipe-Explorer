@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const htmlTemplate = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -47,12 +50,12 @@
         return;
       }
 
-      document.title = `${country.name} - Global Recipe Explorer`;
+      document.title = \`\${country.name} - Global Recipe Explorer\`;
       document.getElementById('countryName').textContent = country.name;
       document.getElementById('countryTitle').textContent = country.name;
-      document.getElementById('countryIntro').textContent = `Explore traditional ${country.name} cuisine, ingredients, and nutritional facts.`;
+      document.getElementById('countryIntro').textContent = \`Explore traditional \${country.name} cuisine, ingredients, and nutritional facts.\`;
       document.getElementById('countryFlag').src = country.flag;
-      document.getElementById('countryFlag').alt = `Flag of ${country.name}`;
+      document.getElementById('countryFlag').alt = \`Flag of \${country.name}\`;
       document.getElementById('capital').textContent = country.capital;
       document.getElementById('continent').textContent = country.continent;
       document.getElementById('dishes').textContent = country.dishes.join(', ');
@@ -61,12 +64,12 @@
       country.recipes.forEach(recipe => {
         const card = document.createElement('div');
         card.className = 'recipe-card animate__animated animate__fadeInUp';
-        card.innerHTML = `
-          <img src="${recipe.image}" alt="${recipe.title}">
-          <h3>${recipe.title}</h3>
-          <p>${recipe.description}</p>
-          <a href="${recipe.link}">View Recipe</a>
-        `;
+        card.innerHTML = \`
+          <img src="\${recipe.image}" alt="\${recipe.title}">
+          <h3>\${recipe.title}</h3>
+          <p>\${recipe.description}</p>
+          <a href="\${recipe.link}">View Recipe</a>
+        \`;
         recipeGrid.appendChild(card);
       });
     }
@@ -74,4 +77,14 @@
     loadCountry();
   </script>
 </body>
-</html>
+</html>`;
+
+const dir = '.';
+
+fs.readdirSync(dir).forEach(file => {
+    if (file.endsWith('.html')) {
+        const filepath = path.join(dir, file);
+        fs.writeFileSync(filepath, htmlTemplate, 'utf8');
+        console.log(`✅ Updated: ${file}`);
+    }
+});

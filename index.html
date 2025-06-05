@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Recipe Explorer</title>
-    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="../src/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -29,19 +29,64 @@
     <!-- Mission -->
     <section id="mission">
         <h2>Our Mission</h2>
-        <p>We help home cooks, cultural explorers, and health-conscious individuals explore global cuisine and
-            nutrition.</p>
+        <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity,
+            richness, and
+            stories behind global cuisine. We believe that food is a powerful connector—it transcends borders, brings
+            people
+            together, and allows us to experience the essence of a culture from the comfort of our own kitchens.
+
+            Whether you’re a home cook looking to expand your culinary skills, a cultural explorer eager to dive into
+            international
+            traditions, or a health-conscious individual searching for nutritious and balanced meals, we are here to
+            guide and
+            inspire your journey. We offer a vibrant platform filled with authentic recipes, cultural insights,
+            nutritional
+            guidance, and modern twists on traditional dishes to make global cooking accessible and enjoyable for
+            everyone.
+
+            Our goal is not just to provide recipes, but to tell the stories behind them—how a simple dish from a
+            village in Italy,
+            a market in Thailand, or a street corner in Morocco carries generations of tradition, passion, and identity.
+            Each meal
+            is an invitation to learn, to taste, and to appreciate the beauty of our shared human experience through
+            food.
+
+            With thoughtfully curated content, interactive tools, and a supportive global community, we aim to empower
+            individuals
+            to cook with confidence, eat with intention, and explore with curiosity. We believe that by discovering what
+            people eat
+            around the world, we can also discover more about ourselves—our values, our creativity, and our place in a
+            global
+            society.
+
+            So whether you’re looking to prepare your first international dish or master the art of world cooking,
+            Global Recipe
+            Explorer is your passport to a lifetime of delicious adventures. Together, let’s transform everyday meals
+            into
+            unforgettable globalexperiences..</p>
     </section>
 
     <!-- Dietary Filter -->
     <section id="filters">
+        <h2>Find Recipes That Match Your Dietary Needs</h2>
+        <p>Select a dietary preference to explore meals that suit your lifestyle, health goals, or personal values.</p>
+
         <label for="dietFilter">Filter by Diet:</label>
-        <select id="dietFilter">
+        <select id="dietFilter" aria-label="Choose a dietary restriction to filter recipes">
             <option value="">Any</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-            <option value="gluten free">Gluten-Free</option>
+            <option value="vegetarian">Vegetarian – No meat, may include dairy or eggs</option>
+            <option value="vegan">Vegan – No animal products at all</option>
+            <option value="gluten free">Gluten-Free – No wheat, barley, or rye</option>
+            <option value="pescatarian">Pescatarian – Vegetarian plus fish</option>
+            <option value="keto">Keto – Low-carb, high-fat</option>
+            <option value="paleo">Paleo – Whole foods, no grains or processed ingredients</option>
+            <option value="halal">Halal – Permissible under Islamic law</option>
+            <option value="kosher">Kosher – In accordance with Jewish dietary laws</option>
         </select>
+
+        <p class="filter-tip">Tip: You can also combine this filter with regional cuisines for more personalized
+            results!
+        </p>
     </section>
 
     <!-- Country Dropdown -->
@@ -50,12 +95,258 @@
         <label for="countryDropdown">Choose a Country:</label>
         <select id="countryDropdown">
             <option value="">-- Select a country --</option>
-            <option value="italy.html">Italy</option>
-            <option value="japan.html">Japan</option>
-            <option value="mexico.html">Mexico</option>
-            <option value="india.html">India</option>
-            <option value="france.html">France</option>
-            <!-- Add more countries as needed -->
+            <option value="countries/aruba.html">Aruba</option>
+            <option value="countries/Afghanistan.html">Afghanistan</option>
+            <option value="countries/angola.html">Angola</option>
+            <option value="countries/anguilla.html">Anguilla</option>
+            <option value="countries/landislands.html">LandIslands</option>
+            <option value="countries/albania.html">Albania</option>
+            <option value="countries/andorra.html">Andorra</option>
+            <option value="countries/unitedarabemirates.html">UnitedArabEmirates</option>
+            <option value="countries/argentina.html">Argentina</option>
+            <option value="countries/armenia.html">Armenia</option>
+            <option value="countries/americansamoa.html">AmericanSamoa</option>
+            <option value="countries/antarctica.html">Antarctica</option>
+            <option value="countries/frenchsouthernterritories.html">FrenchSouthernTerritories</option>
+            <option value="countries/antiguaandbarbuda.html">AntiguaandBarbuda</option>
+            <option value="countries/australia.html">Australia</option>
+            <option value="countries/austria.html">Austria</option>
+            <option value="countries/azerbaijan.html">Azerbaijan</option>
+            <option value="countries/burundi.html">Burundi</option>
+            <option value="countries/belgium.html">Belgium</option>
+            <option value="countries/benin.html">Benin</option>
+            <option value="countries/bonairesinteustatiusandsaba.html">BonaireSintEustatiusandSaba</option>
+            <option value="countries/burkinafaso.html">BurkinaFaso</option>
+            <option value="countries/bangladesh.html">Bangladesh</option>
+            <option value="countries/bulgaria.html">Bulgaria</option>
+            <option value="countries/bahrain.html">Bahrain</option>
+            <option value="countries/bahamas.html">Bahamas</option>
+            <option value="countries/bosniaandherzegovina.html">BosniaandHerzegovina</option>
+            <option value="countries/saintbarthlemy.html">SaintBarthlemy</option>
+            <option value="countries/belarus.html">Belarus</option>
+            <option value="countries/belize.html">Belize</option>
+            <option value="countries/bermuda.html">Bermuda</option>
+            <option value="countries/boliviaplurinationalstateof.html">BoliviaPlurinationalStateof</option>
+            <option value="countries/brazil.html">Brazil</option>
+            <option value="countries/barbados.html">Barbados</option>
+            <option value="countries/bruneidarussalam.html">BruneiDarussalam</option>
+            <option value="countries/bhutan.html">Bhutan</option>
+            <option value="countries/bouvetisland.html">BouvetIsland</option>
+            <option value="countries/botswana.html">Botswana</option>
+            <option value="countries/centralafricanrepublic.html">CentralAfricanRepublic</option>
+            <option value="countries/canada.html">Canada</option>
+            <option value="countries/cocoskeelingislands.html">CocosKeelingIslands</option>
+            <option value="countries/switzerland.html">Switzerland</option>
+            <option value="countries/chile.html">Chile</option>
+            <option value="countries/china.html">China</option>
+            <option value="countries/ctedivoire.html">CtedIvoire</option>
+            <option value="countries/cameroon.html">Cameroon</option>
+            <option value="countries/congothedemocraticrepublicofthe.html">CongoTheDemocraticRepublicofthe</option>
+            <option value="countries/congo.html">Congo</option>
+            <option value="countries/cookislands.html">CookIslands</option>
+            <option value="countries/colombia.html">Colombia</option>
+            <option value="countries/comoros.html">Comoros</option>
+            <option value="countries/caboverde.html">CaboVerde</option>
+            <option value="countries/costarica.html">CostaRica</option>
+            <option value="countries/cuba.html">Cuba</option>
+            <option value="countries/curaao.html">Curaao</option>
+            <option value="countries/christmasisland.html">ChristmasIsland</option>
+            <option value="countries/caymanislands.html">CaymanIslands</option>
+            <option value="countries/cyprus.html">Cyprus</option>
+            <option value="countries/czechia.html">Czechia</option>
+            <option value="countries/germany.html">Germany</option>
+            <option value="countries/djibouti.html">Djibouti</option>
+            <option value="countries/dominica.html">Dominica</option>
+            <option value="countries/denmark.html">Denmark</option>
+            <option value="countries/dominicanrepublic.html">DominicanRepublic</option>
+            <option value="countries/algeria.html">Algeria</option>
+            <option value="countries/ecuador.html">Ecuador</option>
+            <option value="countries/egypt.html">Egypt</option>
+            <option value="countries/eritrea.html">Eritrea</option>
+            <option value="countries/westernsahara.html">WesternSahara</option>
+            <option value="countries/spain.html">Spain</option>
+            <option value="countries/estonia.html">Estonia</option>
+            <option value="countries/ethiopia.html">Ethiopia</option>
+            <option value="countries/finland.html">Finland</option>
+            <option value="countries/fiji.html">Fiji</option>
+            <option value="countries/falklandislandsmalvinas.html">FalklandIslandsMalvinas</option>
+            <option value="countries/france.html">France</option>
+            <option value="countries/faroeislands.html">FaroeIslands</option>
+            <option value="countries/micronesiafederatedstatesof.html">MicronesiaFederatedStatesof</option>
+            <option value="countries/gabon.html">Gabon</option>
+            <option value="countries/unitedkingdom.html">UnitedKingdom</option>
+            <option value="countries/georgia.html">Georgia</option>
+            <option value="countries/guernsey.html">Guernsey</option>
+            <option value="countries/ghana.html">Ghana</option>
+            <option value="countries/gibraltar.html">Gibraltar</option>
+            <option value="countries/guinea.html">Guinea</option>
+            <option value="countries/guadeloupe.html">Guadeloupe</option>
+            <option value="countries/gambia.html">Gambia</option>
+            <option value="countries/guineabissau.html">GuineaBissau</option>
+            <option value="countries/equatorialguinea.html">EquatorialGuinea</option>
+            <option value="countries/greece.html">Greece</option>
+            <option value="countries/grenada.html">Grenada</option>
+            <option value="countries/greenland.html">Greenland</option>
+            <option value="countries/guatemala.html">Guatemala</option>
+            <option value="countries/frenchguiana.html">FrenchGuiana</option>
+            <option value="countries/guam.html">Guam</option>
+            <option value="countries/guyana.html">Guyana</option>
+            <option value="countries/hongkong.html">HongKong</option>
+            <option value="countries/heardislandandmcdonaldislands.html">HeardIslandandMcDonaldIslands</option>
+            <option value="countries/honduras.html">Honduras</option>
+            <option value="countries/croatia.html">Croatia</option>
+            <option value="countries/haiti.html">Haiti</option>
+            <option value="countries/hungary.html">Hungary</option>
+            <option value="countries/indonesia.html">Indonesia</option>
+            <option value="countries/isleofman.html">IsleofMan</option>
+            <option value="countries/india.html">India</option>
+            <option value="countries/britishindianoceanterritory.html">BritishIndianOceanTerritory</option>
+            <option value="countries/ireland.html">Ireland</option>
+            <option value="countries/iranislamicrepublicof.html">IranIslamicRepublicof</option>
+            <option value="countries/iraq.html">Iraq</option>
+            <option value="countries/iceland.html">Iceland</option>
+            <option value="countries/israel.html">Israel</option>
+            <option value="countries/italy.html">Italy</option>
+            <option value="countries/jamaica.html">Jamaica</option>
+            <option value="countries/jersey.html">Jersey</option>
+            <option value="countries/jordan.html">Jordan</option>
+            <option value="countries/japan.html">Japan</option>
+            <option value="countries/kazakhstan.html">Kazakhstan</option>
+            <option value="countries/kenya.html">Kenya</option>
+            <option value="countries/kyrgyzstan.html">Kyrgyzstan</option>
+            <option value="countries/cambodia.html">Cambodia</option>
+            <option value="countries/kiribati.html">Kiribati</option>
+            <option value="countries/saintkittsandnevis.html">SaintKittsandNevis</option>
+            <option value="countries/korearepublicof.html">KoreaRepublicof</option>
+            <option value="countries/kuwait.html">Kuwait</option>
+            <option value="countries/laopeoplesdemocraticrepublic.html">LaoPeoplesDemocraticRepublic</option>
+            <option value="countries/lebanon.html">Lebanon</option>
+            <option value="countries/liberia.html">Liberia</option>
+            <option value="countries/libya.html">Libya</option>
+            <option value="countries/saintlucia.html">SaintLucia</option>
+            <option value="countries/liechtenstein.html">Liechtenstein</option>
+            <option value="countries/srilanka.html">SriLanka</option>
+            <option value="countries/lesotho.html">Lesotho</option>
+            <option value="countries/lithuania.html">Lithuania</option>
+            <option value="countries/luxembourg.html">Luxembourg</option>
+            <option value="countries/latvia.html">Latvia</option>
+            <option value="countries/macao.html">Macao</option>
+            <option value="countries/saintmartinfrenchpart.html">SaintMartinFrenchpart</option>
+            <option value="countries/morocco.html">Morocco</option>
+            <option value="countries/monaco.html">Monaco</option>
+            <option value="countries/moldovarepublicof.html">MoldovaRepublicof</option>
+            <option value="countries/madagascar.html">Madagascar</option>
+            <option value="countries/maldives.html">Maldives</option>
+            <option value="countries/mexico.html">Mexico</option>
+            <option value="countries/marshallislands.html">MarshallIslands</option>
+            <option value="countries/northmacedonia.html">NorthMacedonia</option>
+            <option value="countries/mali.html">Mali</option>
+            <option value="countries/malta.html">Malta</option>
+            <option value="countries/myanmar.html">Myanmar</option>
+            <option value="countries/montenegro.html">Montenegro</option>
+            <option value="countries/mongolia.html">Mongolia</option>
+            <option value="countries/northernmarianaislands.html">NorthernMarianaIslands</option>
+            <option value="countries/mozambique.html">Mozambique</option>
+            <option value="countries/mauritania.html">Mauritania</option>
+            <option value="countries/montserrat.html">Montserrat</option>
+            <option value="countries/martinique.html">Martinique</option>
+            <option value="countries/mauritius.html">Mauritius</option>
+            <option value="countries/malawi.html">Malawi</option>
+            <option value="countries/malaysia.html">Malaysia</option>
+            <option value="countries/mayotte.html">Mayotte</option>
+            <option value="countries/namibia.html">Namibia</option>
+            <option value="countries/newcaledonia.html">NewCaledonia</option>
+            <option value="countries/niger.html">Niger</option>
+            <option value="countries/norfolkisland.html">NorfolkIsland</option>
+            <option value="countries/nigeria.html">Nigeria</option>
+            <option value="countries/nicaragua.html">Nicaragua</option>
+            <option value="countries/niue.html">Niue</option>
+            <option value="countries/netherlands.html">Netherlands</option>
+            <option value="countries/norway.html">Norway</option>
+            <option value="countries/nepal.html">Nepal</option>
+            <option value="countries/nauru.html">Nauru</option>
+            <option value="countries/newzealand.html">NewZealand</option>
+            <option value="countries/oman.html">Oman</option>
+            <option value="countries/pakistan.html">Pakistan</option>
+            <option value="countries/panama.html">Panama</option>
+            <option value="countries/pitcairn.html">Pitcairn</option>
+            <option value="countries/peru.html">Peru</option>
+            <option value="countries/philippines.html">Philippines</option>
+            <option value="countries/palau.html">Palau</option>
+            <option value="countries/papuanewguinea.html">PapuaNewGuinea</option>
+            <option value="countries/poland.html">Poland</option>
+            <option value="countries/puertorico.html">PuertoRico</option>
+            <option value="countries/koreademocraticpeoplesrepublicof.html">KoreaDemocraticPeoplesRepublicof</option>
+            <option value="countries/portugal.html">Portugal</option>
+            <option value="countries/paraguay.html">Paraguay</option>
+            <option value="countries/palestinestateof.html">PalestineStateof</option>
+            <option value="countries/frenchpolynesia.html">FrenchPolynesia</option>
+            <option value="countries/qatar.html">Qatar</option>
+            <option value="countries/runion.html">Runion</option>
+            <option value="countries/romania.html">Romania</option>
+            <option value="countries/russianfederation.html">RussianFederation</option>
+            <option value="countries/rwanda.html">Rwanda</option>
+            <option value="countries/saudiarabia.html">SaudiArabia</option>
+            <option value="countries/sudan.html">Sudan</option>
+            <option value="countries/senegal.html">Senegal</option>
+            <option value="countries/singapore.html">Singapore</option>
+            <option value="countries/southgeorgiaandthesouthsandwichislands.html">SouthGeorgiaandtheSouthSandwichIslands
+            </option>
+            <option value="countries/sainthelenaascensionandtristandacunha.html">SaintHelenaAscensionandTristandaCunha
+            </option>
+            <option value="countries/svalbardandjanmayen.html">SvalbardandJanMayen</option>
+            <option value="countries/solomonislands.html">SolomonIslands</option>
+            <option value="countries/sierraleone.html">SierraLeone</option>
+            <option value="countries/elsalvador.html">ElSalvador</option>
+            <option value="countries/sanmarino.html">SanMarino</option>
+            <option value="countries/somalia.html">Somalia</option>
+            <option value="countries/saintpierreandmiquelon.html">SaintPierreandMiquelon</option>
+            <option value="countries/serbia.html">Serbia</option>
+            <option value="countries/southsudan.html">SouthSudan</option>
+            <option value="countries/saotomeandprincipe.html">SaoTomeandPrincipe</option>
+            <option value="countries/suriname.html">Suriname</option>
+            <option value="countries/slovakia.html">Slovakia</option>
+            <option value="countries/slovenia.html">Slovenia</option>
+            <option value="countries/sweden.html">Sweden</option>
+            <option value="countries/eswatini.html">Eswatini</option>
+            <option value="countries/sintmaartendutchpart.html">SintMaartenDutchpart</option>
+            <option value="countries/seychelles.html">Seychelles</option>
+            <option value="countries/syrianarabrepublic.html">SyrianArabRepublic</option>
+            <option value="countries/turksandcaicosislands.html">TurksandCaicosIslands</option>
+            <option value="countries/chad.html">Chad</option>
+            <option value="countries/togo.html">Togo</option>
+            <option value="countries/thailand.html">Thailand</option>
+            <option value="countries/tajikistan.html">Tajikistan</option>
+            <option value="countries/tokelau.html">Tokelau</option>
+            <option value="countries/turkmenistan.html">Turkmenistan</option>
+            <option value="countries/timorleste.html">TimorLeste</option>
+            <option value="countries/tonga.html">Tonga</option>
+            <option value="countries/trinidadandtobago.html">TrinidadandTobago</option>
+            <option value="countries/tunisia.html">Tunisia</option>
+            <option value="countries/turkey.html">Turkey</option>
+            <option value="countries/tuvalu.html">Tuvalu</option>
+            <option value="countries/taiwanprovinceofchina.html">TaiwanProvinceofChina</option>
+            <option value="countries/tanzaniaunitedrepublicof.html">TanzaniaUnitedRepublicof</option>
+            <option value="countries/uganda.html">Uganda</option>
+            <option value="countries/ukraine.html">Ukraine</option>
+            <option value="countries/unitedstatesminoroutlyingislands.html">UnitedStatesMinorOutlyingIslands</option>
+            <option value="countries/uruguay.html">Uruguay</option>
+            <option value="countries/unitedstates.html">UnitedStates</option>
+            <option value="countries/uzbekistan.html">Uzbekistan</option>
+            <option value="countries/holyseevaticancitystate.html">HolySeeVaticanCityState</option>
+            <option value="countries/saintvincentandthegrenadines.html">SaintVincentandtheGrenadines</option>
+            <option value="countries/venezuelabolivarianrepublicof.html">VenezuelaBolivarianRepublicof</option>
+            <option value="countries/virginislandsbritish.html">VirginIslandsBritish</option>
+            <option value="countries/virginislandsus.html">VirginIslandsUS</option>
+            <option value="countries/vietnam.html">VietNam</option>
+            <option value="countries/vanuatu.html">Vanuatu</option>
+            <option value="countries/wallisandfutuna.html">WallisandFutuna</option>
+            <option value="countries/samoa.html">Samoa</option>
+            <option value="countries/yemen.html">Yemen</option>
+            <option value="countries/southafrica.html">SouthAfrica</option>
+            <option value="countries/zambia.html">Zambia</option>
+            <option value="countries/zimbabwe.html">Zimbabwe</option>
+
         </select>
         <button onclick="goToCountry()">Go</button>
     </section>
@@ -68,8 +359,10 @@
     <!-- Advertisements -->
     <section id="ads">
         <h3>Sponsored</h3>
-        <img src="ad1.jpg" alt="Ad 1">
-        <img src="ad2.jpg" alt="Ad 2">
+        <img src="/public/images/image.png" alt="Ad 1">
+        <img src="/public/images/image.png" alt="Ad 2">
+        <img src="/public/images/image.png" alt="Ad 3">
+        <img src="/public/images/image.png" alt="Ad 4">
     </section>
 
     <!-- Scripts -->
