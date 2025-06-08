@@ -5,6 +5,8 @@ const dietFilter = document.getElementById('dietFilter');
 const weeklyBtn = document.getElementById('weeklyBtn');
 const countryFilter = document.getElementById('countryFilter');
 // countryDropdown is not used—optional
+ 
+
 
 // Diet Filter
 if (dietFilter) {
