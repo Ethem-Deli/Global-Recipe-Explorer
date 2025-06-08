@@ -7,7 +7,7 @@
     <title>Global Recipe Explorer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-CEgwJ2T7.js"></script>
+  <script type="module" crossorigin src="/assets/index-Cq_Lck5s.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-OwFhafqL.css">
 </head>
 
@@ -33,7 +33,7 @@
         <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity...
         </p>
     </section>
-    <!-- after this -->
+
     <!-- Diet Filter + Recipes -->
     <section class="content-box" id="filter-recipes-wrapper">
         <h2>Dietary Filters & Recipes</h2>
@@ -62,9 +62,90 @@
         <h2>Country Filter & Popular Recipes</h2>
         <select id="countryFilter">
             <option value="">-- Select Country --</option>
-            <option value="France">France</option>
-            <option value="Japan">Japan</option>
-            <option value="Mexico">Mexico</option>
+            <option value="afghanistan"> Afghanistan</option>
+            <option value="algeria"> Algeria</option>
+            <option value="argentina"> Argentina</option>
+            <option value="armenia"> Armenia</option>
+            <option value="australia"> Australia</option>
+            <option value="austria"> Austria</option>
+            <option value="bangladesh"> Bangladesh</option>
+            <option value="belgium"> Belgium</option>
+            <option value="brazil"> Brazil</option>
+            <option value="canada"> Canada</option>
+            <option value="chile"> Chile</option>
+            <option value="china"> China</option>
+            <option value="colombia"> Colombia</option>
+            <option value="croatia"> Croatia</option>
+            <option value="cuba"> Cuba</option>
+            <option value="czechia"> Czechia</option>
+            <option value="denmark"> Denmark</option>
+            <option value="dominicanrepublic"> Dominicanrepublic</option>
+            <option value="egypt"> Egypt</option>
+            <option value="england"> England</option>
+            <option value="finland"> Finland</option>
+            <option value="france"> France</option>
+            <option value="germany"> Germany</option>
+            <option value="greece"> Greece</option>
+            <option value="guatemala"> Guatemala</option>
+            <option value="haiti"> Haiti</option>
+            <option value="honduras"> Honduras</option>
+            <option value="hungary"> Hungary</option>
+            <option value="india"> India</option>
+            <option value="indonesia"> Indonesia</option>
+            <option value="iran"> Iran</option>
+            <option value="iraq"> Iraq</option>
+            <option value="ireland"> Ireland</option>
+            <option value="israel"> Israel</option>
+            <option value="italy"> Italy</option>
+            <option value="jamaica"> Jamaica</option>
+            <option value="japan"> Japan</option>
+            <option value="jordan"> Jordan</option>
+            <option value="kenya"> Kenya</option>
+            <option value="korea"> Korea</option>
+            <option value="lebanon"> Lebanon</option>
+            <option value="malaysia"> Malaysia</option>
+            <option value="mexico"> Mexico</option>
+            <option value="morocco"> Morocco</option>
+            <option value="nepal"> Nepal</option>
+            <option value="netherlands"> Netherlands</option>
+            <option value="newzealand"> Newzealand</option>
+            <option value="nicaragua"> Nicaragua</option>
+            <option value="nigeria"> Nigeria</option>
+            <option value="norway"> Norway</option>
+            <option value="pakistan"> Pakistan</option>
+            <option value="peru"> Peru</option>
+            <option value="philippines"> Philippines</option>
+            <option value="poland"> Poland</option>
+            <option value="portugal"> Portugal</option>
+            <option value="puertorico"> Puertorico</option>
+            <option value="qatar"> Qatar</option>
+            <option value="romania"> Romania</option>
+            <option value="russianfederation"> Russianfederation</option>
+            <option value="saudiarabia"> Saudiarabia</option>
+            <option value="senegal"> Senegal</option>
+            <option value="serbia"> Serbia</option>
+            <option value="singapore"> Singapore</option>
+            <option value="slovakia"> Slovakia</option>
+            <option value="slovenia"> Slovenia</option>
+            <option value="southafrica"> Southafrica</option>
+            <option value="southkorea"> Southkorea</option>
+            <option value="spain"> Spain</option>
+            <option value="srilanka"> Srilanka</option>
+            <option value="sweden"> Sweden</option>
+            <option value="switzerland"> Switzerland</option>
+            <option value="syria"> Syria</option>
+            <option value="thailand"> Thailand</option>
+            <option value="tunisia"> Tunisia</option>
+            <option value="turkey"> Turkey</option>
+            <option value="ukraine"> Ukraine</option>
+            <option value="unitedarabemirates"> Unitedarabemirates</option>
+            <option value="unitedkingdom"> Unitedkingdom</option>
+            <option value="unitedstates"> Unitedstates</option>
+            <option value="uruguay"> Uruguay</option>
+            <option value="venezuela"> Venezuela</option>
+            <option value="vietnam"> Vietnam</option>
+            <option value="yemen"> Yemen</option>
+            <option value="zimbabwe"> Zimbabwe</option>
         </select>
         <div id="country-recipes" class="recipe-grid"></div>
     </section>
@@ -73,58 +154,6 @@
     <section class="content-box" id="country-info-wrapper">
         <h2>Country Information</h2>
         <div id="country-details"></div>
-    </section>
-
-    <!-- Dbefore this -->
-    <section id="filter-recipes-wrapper" class="filter-recipes-box">
-        <h2>Dietary Filters & Recipes</h2>
-
-        <div id="filters">
-            <select id="dietFilter">
-                <option value="">-- Select Diet --</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="vegan">Vegan</option>
-                <option value="gluten free">Gluten Free</option>
-                <option value="paleo">Paleo</option>
-            </select>
-        </div>
-
-        <div id="recipes">
-            <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
-        </div>
-    </section>
-
-    <!-- Weekly Generator -->
-    <section>
-        <h2>Weekly Recipe Generator</h2>
-        <button id="weeklyBtn">Generate Weekly Recipes</button>
-    </section>
-
-    <!-- Country Filter -->
-    <section id="country-filters">
-        <h2>Country Filter</h2>
-        <select id="countryFilter">
-            <option value="">-- Select Country --</option>
-            <option value="aruba">Aruba</option>
-            <option value="afghanistan">Afghanistan</option>
-            <option value="zimbabwe">Zimbabwe</option>
-            <option value="France">France</option>
-            <option value="Japan">Japan</option>
-            <option value="Mexico">Mexico</option>
-        </select>
-    </section>
-
-    <!-- Country Recipes -->
-    <section id="CountryRecipe">
-        <h2>Popular Recipes from Selected Country</h2>
-        <div id="country-recipes" class="recipe-grid"></div>
-    </section>
-
-    <!-- Country Info -->
-    <section id="country-info">
-        <h3>Country Information</h3>
-        <div id="country-details"></div>
-        <div id="country-facts"></div>
     </section>
 
     <!-- Ads -->
