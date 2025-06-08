@@ -9,21 +9,41 @@
 
 /* Global & Typography */
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5dc;
+    /* Beige */
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: 16px;
-    line-height: 1.6;
 }
 
 h1,
 h2,
 h3 {
     font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
-    text-align: center;
-    margin-top: 0;
+    
+}
+
+.recipe-card {
+    background-color: #ffffff;
+    border: 2px solid #e2725b;
+    /* Terracotta */
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.03);
+}
+
+.favorite-btn {
+    cursor: pointer;
+    color: #e2725b;
+    font-size: 20px;
+    float: right;
 }
 
 /* Navigation */

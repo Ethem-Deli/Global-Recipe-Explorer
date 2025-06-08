@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -32,25 +33,21 @@
         <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity...
         </p>
     </section>
-
-    <!-- Dietary Filter -->
-    <section id="filters">
-        <h2>Find Recipes That Match Your Dietary Needs</h2>
-        <label for="dietFilter">Filter by Diet:</label>
-        <select id="dietFilter" aria-label="Choose a dietary restriction to filter recipes">
-            <option value="">Any</option>
-            <option value="vegetarian">Vegetarian – No meat, may include dairy or eggs</option>
-            <option value="vegan">Vegan – No animal products at all</option>
-            <option value="gluten free">Gluten-Free – No wheat, barley, or rye</option>
-            <option value="pescatarian">Pescatarian – Vegetarian plus fish</option>
-            <option value="keto">Keto – Low-carb, high-fat</option>
-            <option value="paleo">Paleo – Whole foods, no grains or processed ingredients</option>
-            <option value="halal">Halal – Permissible under Islamic law</option>
-            <option value="kosher">Kosher – In accordance with Jewish dietary laws</option>
+    <section>
+        
+        <h2>Filters</h2>
+        <select id="dietFilter">
+            <option value="">-- Select Diet --</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten free">Gluten Free</option>
+            <option value="paleo">Paleo</option>
         </select>
-        <p class="filter-tip">Tip: You can also combine this filter with regional cuisines for more personalized
-            results!</p>
-        <button onclick="loaddetails()">Load</button>
+    </section>
+    
+    <section>
+        <h2>Weekly Recipe Generator</h2>
+        <button id="weeklyBtn">Generate Weekly Recipes</button>
     </section>
 
     <!-- Vegetarian Recipes Results -->
@@ -58,6 +55,8 @@
         <h3>Diet-Based Recipes</h3>
         <div id="dietary-recipes-container" class="recipe-grid"></div>
     </section>
+
+    <div id="recipes">recipes will be here</div>
 
     <!-- Country Dropdown -->
     <section id="country-select">
@@ -260,10 +259,8 @@
             <option value="countries/sudan.html">Sudan</option>
             <option value="countries/senegal.html">Senegal</option>
             <option value="countries/singapore.html">Singapore</option>
-            <option value="countries/southgeorgiaandthesouthsandwichislands.html">SouthGeorgiaandtheSouthSandwichIslands
-            </option>
-            <option value="countries/sainthelenaascensionandtristandacunha.html">SaintHelenaAscensionandTristandaCunha
-            </option>
+            <option value="countries/southgeorgiaandthesouthsandwichislands.html">SouthGeorgiaandtheSouthSandwichIslands</option>
+            <option value="countries/sainthelenaascensionandtristandacunha.html">SaintHelenaAscensionandTristandaCunha</option>
             <option value="countries/svalbardandjanmayen.html">SvalbardandJanMayen</option>
             <option value="countries/solomonislands.html">SolomonIslands</option>
             <option value="countries/sierraleone.html">SierraLeone</option>
