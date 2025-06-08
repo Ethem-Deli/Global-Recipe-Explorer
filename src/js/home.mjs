@@ -1,9 +1,10 @@
 // src/js/home.mjs
-
 fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then(data => {
         const grid = document.getElementById('flagGrid');
+        if (!grid) return;
+
         const sortedCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
         sortedCountries.forEach(country => {

@@ -1,11 +1,11 @@
 // vite.config.js
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
     build: {
-        outDir: 'build'  // <- This is what changes the output folder from 'dist' to 'build'
+        outDir: 'build'
     }
-})
+});
 
 
 //import { defineConfig } from 'vite';
