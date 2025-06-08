@@ -102,6 +102,7 @@ function fetchCountryInfo(name) {
     .catch(err => console.error('Error loading country info:', err));
 }
 
+
 // Fetch Country Recipes
 function fetchCountryRecipes(country) {
   const cuisineMap = {
