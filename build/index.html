@@ -7,8 +7,8 @@
     <title>Global Recipe Explorer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-CKvMraz_.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DGnGBQtX.css">
+  <script type="module" crossorigin src="/assets/index-DYQTLRRD.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DeUDKDdX.css">
 </head>
 
 <body>
@@ -57,26 +57,31 @@
         <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
     </section>
 
+    <!-- Country Filter -->
     <section id="country-filters">
-        <h2>Country-filters</h2>
+        <h2>Country Filter</h2>
         <select id="countryFilter">
             <option value="">-- Select Country --</option>
             <option value="aruba">Aruba</option>
             <option value="afghanistan">Afghanistan</option>
             <option value="zimbabwe">Zimbabwe</option>
+            <option value="France">France</option>
+            <option value="Japan">Japan</option>
+            <option value="Mexico">Mexico</option>
         </select>
     </section>
 
-        <section id="CountryRecipe">
+    <!-- Country Recipes -->
+    <section id="CountryRecipe">
+        <h2>Popular Recipes from Selected Country</h2>
         <div id="country-recipes" class="recipe-grid"></div>
-        </section>
+    </section>
 
     <!-- Country Info -->
     <section id="country-info">
         <h3>Country Information</h3>
         <div id="country-details"></div>
         <div id="country-facts"></div>
-        <div id="country-recipes" class="recipe-grid"></div>
     </section>
 
     <!-- Ads -->
@@ -89,18 +94,6 @@
     </section>
 
     <!-- Main Script -->
-
-    <script>
-        function goToCountry() {
-            const dropdown = document.getElementById('countryDropdown');
-            const selectedPage = dropdown.value;
-            if (selectedPage) {
-                window.location.href = selectedPage;
-            } else {
-                alert("Please select a country first.");
-            }
-        }
-    </script>
 </body>
 
 </html>

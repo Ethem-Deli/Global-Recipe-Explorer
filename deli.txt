@@ -5,7 +5,11 @@ Serve Locally to debug and confirm
 npx serve build
 Visit http://localhost:3000 — your site should now load correctly!
 
-Deploying to Netlify?
+for dev tool
+npm run dev  
+
+
+Deploying to Netlify
 Update your Netlify settings to:
 Build command: vite build
 Publish directory: build
