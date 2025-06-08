@@ -1,3 +1,8 @@
+//src/main.js
+import './js/home.mjs';        // country flags
+import './js/nutrition.mjs';   // diet filters
+import './js/country.mjs';     // country explorer
+import './js/recipe.mjs';      // recipe detail (optional)
 import '../src/css/styles.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
@@ -22,3 +27,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.getElementById('menu').classList.toggle('show');
+});

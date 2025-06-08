@@ -1,0 +1,11 @@
+Rebuild the Project
+npm run build
+
+Serve Locally to debug and confirm
+npx serve build
+Visit http://localhost:3000 — your site should now load correctly!
+
+5. Deploying to Netlify?
+Update your Netlify settings to:
+Build command: vite build
+Publish directory: build
