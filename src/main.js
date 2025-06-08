@@ -4,9 +4,6 @@ import '../src/css/styles.css';
 const dietFilter = document.getElementById('dietFilter');
 const weeklyBtn = document.getElementById('weeklyBtn');
 const countryFilter = document.getElementById('countryFilter');
-// countryDropdown is not used—optional
- 
-
 
 // Diet Filter
 if (dietFilter) {
@@ -107,6 +104,96 @@ function fetchCountryInfo(name) {
 
 // Fetch Country Recipes
 function fetchCountryRecipes(country) {
+  const cuisineMap = {
+    afghanistan: 'middle eastern',
+    algeria: 'african',
+    argentina: 'latin american',
+    armenia: 'middle eastern',
+    australia: 'british',
+    austria: 'european',
+    bangladesh: 'indian',
+    belgium: 'european',
+    brazil: 'latin american',
+    canada: 'american',
+    chile: 'latin american',
+    china: 'chinese',
+    colombia: 'latin american',
+    croatia: 'european',
+    cuba: 'caribbean',
+    czechia: 'european',
+    denmark: 'nordic',
+    dominicanrepublic: 'caribbean',
+    egypt: 'middle eastern',
+    england: 'british',
+    finland: 'nordic',
+    france: 'french',
+    germany: 'german',
+    greece: 'greek',
+    guatemala: 'latin american',
+    haiti: 'caribbean',
+    honduras: 'latin american',
+    hungary: 'european',
+    india: 'indian',
+    indonesia: 'asian',
+    iran: 'middle eastern',
+    iraq: 'middle eastern',
+    ireland: 'british',
+    israel: 'middle eastern',
+    italy: 'italian',
+    jamaica: 'caribbean',
+    japan: 'japanese',
+    jordan: 'middle eastern',
+    kenya: 'african',
+    korea: 'korean',
+    lebanon: 'middle eastern',
+    malaysia: 'asian',
+    mexico: 'mexican',
+    morocco: 'african',
+    nepal: 'indian',
+    netherlands: 'european',
+    newzealand: 'british',
+    nicaragua: 'latin american',
+    nigeria: 'african',
+    norway: 'nordic',
+    pakistan: 'indian',
+    peru: 'latin american',
+    philippines: 'asian',
+    poland: 'european',
+    portugal: 'mediterranean',
+    puertorico: 'caribbean',
+    qatar: 'middle eastern',
+    romania: 'european',
+    russianfederation: 'eastern european',
+    saudiarabia: 'middle eastern',
+    senegal: 'african',
+    serbia: 'european',
+    singapore: 'asian',
+    slovakia: 'european',
+    slovenia: 'european',
+    southafrica: 'african',
+    southkorea: 'korean',
+    spain: 'spanish',
+    srilanka: 'indian',
+    sweden: 'nordic',
+    switzerland: 'european',
+    syria: 'middle eastern',
+    thailand: 'thai',
+    tunisia: 'african',
+    turkey: 'mediterranean',
+    ukraine: 'eastern european',
+    unitedarabemirates: 'middle eastern',
+    unitedkingdom: 'british',
+    unitedstates: 'american',
+    uruguay: 'latin american',
+    venezuela: 'latin american',
+    vietnam: 'vietnamese',
+    yemen: 'middle eastern',
+    zimbabwe: 'african'
+  };
+
+  const cuisine = cuisineMap[country.toLowerCase().replace(/\s+/g, '')] || 'world';
+  console.log('[Fetch Recipes for Country]: cuisine =', cuisine);
+
   const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
   const container = document.getElementById('country-recipes');
   if (!container) {
@@ -114,21 +201,17 @@ function fetchCountryRecipes(country) {
     return;
   }
 
-  console.log('[Fetch Recipes for Country]:', country);
-  fetch(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${country}&number=6&apiKey=${apiKey}`)
+  fetch(
+    `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=6&apiKey=${apiKey}`
+  )
     .then(res => res.json())
     .then(data => {
       console.log('[Country Recipes Data]:', data);
       container.innerHTML = '';
-      container.style.display = 'grid';
-      container.style.gridTemplateColumns = 'repeat(3, 1fr)';
-      container.style.gap = '1.5rem';
-
-      if (!data.results || data.results.length === 0) {
+      if (!data.results?.length) {
         container.innerHTML = '<p>No recipes found for this country.</p>';
         return;
       }
-
       data.results.forEach(r => {
         const card = document.createElement('div');
         card.className = 'recipe-card';

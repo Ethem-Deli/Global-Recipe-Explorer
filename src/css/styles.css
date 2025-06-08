@@ -80,7 +80,7 @@ nav ul.menu li a:hover {
 }
 
 section {
-    padding: 2rem;
+    padding: 5rem;
 }
 
 #mission,
@@ -133,7 +133,7 @@ section {
 
 .recipe-card {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -146,7 +146,7 @@ section {
 }
 
 .recipe-card img {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 6px;
 }
@@ -207,4 +207,81 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+}
+
+/* Wrapper for filter + recipes */
+#filter-recipes-wrapper {
+    background: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+/* Dropdown styling */
+#filter-recipes-wrapper select#dietFilter {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Recipe container flush adjustment (optional) */
+#filter-recipes-wrapper #recipes {
+    margin-top: 1rem;
+}
+
+/* Wrapper for each functional section */
+.content-box {
+    background: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+/* Consistent dropdown styling */
+.content-box select {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75em;
+    margin: 0.5em 0 1.5em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Move button slightly down for weekly */
+/* Weekly Recipe Generator */
+#weekly-wrapper button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5em;
+}
+
+#weekly-wrapper button:hover {
+    background-color: #1565c0;
+}
+
+/* Ensure consistent recipe grid layout */
+.recipe-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Country Info Box */
+#country-info-wrapper {
+    margin-top: 1.5em;
 }

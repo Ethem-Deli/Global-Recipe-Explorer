@@ -7,8 +7,8 @@
     <title>Global Recipe Explorer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-DYQTLRRD.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DeUDKDdX.css">
+  <script type="module" crossorigin src="/assets/index-CEgwJ2T7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-OwFhafqL.css">
 </head>
 
 <body>
@@ -33,10 +33,10 @@
         <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity...
         </p>
     </section>
-
-    <!-- Filters -->
-    <section id="filters">
-        <h2>Filters</h2>
+    <!-- after this -->
+    <!-- Diet Filter + Recipes -->
+    <section class="content-box" id="filter-recipes-wrapper">
+        <h2>Dietary Filters & Recipes</h2>
         <select id="dietFilter">
             <option value="">-- Select Diet --</option>
             <option value="vegetarian">Vegetarian</option>
@@ -44,17 +44,60 @@
             <option value="gluten free">Gluten Free</option>
             <option value="paleo">Paleo</option>
         </select>
+        <div id="recipes" class="recipe-grid">
+            <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
+        </div>
+    </section>
+
+    <!-- Weekly Generator -->
+    <section class="content-box" id="weekly-wrapper">
+        <h2>Weekly Recipe Generator</h2>
+        <button id="weeklyBtn">Generate Weekly Recipes</button>
+        <!-- Optionally display weekly recipes inside the same workout recipes grid -->
+        <div id="recipes"></div>
+    </section>
+
+    <!-- Country Filter + Popular Recipes -->
+    <section class="content-box" id="country-recipes-wrapper">
+        <h2>Country Filter & Popular Recipes</h2>
+        <select id="countryFilter">
+            <option value="">-- Select Country --</option>
+            <option value="France">France</option>
+            <option value="Japan">Japan</option>
+            <option value="Mexico">Mexico</option>
+        </select>
+        <div id="country-recipes" class="recipe-grid"></div>
+    </section>
+
+    <!-- Country Info -->
+    <section class="content-box" id="country-info-wrapper">
+        <h2>Country Information</h2>
+        <div id="country-details"></div>
+    </section>
+
+    <!-- Dbefore this -->
+    <section id="filter-recipes-wrapper" class="filter-recipes-box">
+        <h2>Dietary Filters & Recipes</h2>
+
+        <div id="filters">
+            <select id="dietFilter">
+                <option value="">-- Select Diet --</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten free">Gluten Free</option>
+                <option value="paleo">Paleo</option>
+            </select>
+        </div>
+
+        <div id="recipes">
+            <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
+        </div>
     </section>
 
     <!-- Weekly Generator -->
     <section>
         <h2>Weekly Recipe Generator</h2>
         <button id="weeklyBtn">Generate Weekly Recipes</button>
-    </section>
-
-    <!-- Recipe Results -->
-    <section id="recipes">
-        <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
     </section>
 
     <!-- Country Filter -->
