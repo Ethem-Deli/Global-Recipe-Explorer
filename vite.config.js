@@ -1,23 +1,13 @@
 // vite.config.js
-// vite.config.js
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/Global-Recipe-Explorer/',  // 👈 This is the key fix
     build: {
-        outDir: 'build'
+        outDir: 'build'  // <- This is what changes the output folder from 'dist' to 'build'
     }
-});
+})
 
-//1
-//import { defineConfig } from 'vite';
 
-//export default defineConfig({
-//    build: {
-//       outDir: 'build'
-//    }
-//});
-//2
 //import { defineConfig } from 'vite';
 //export default defineConfig({
 //    base: '/Global-Recipe-Explorer/',
