@@ -7,7 +7,7 @@
     <title>Global Recipe Explorer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-gzrrD9Ol.js"></script>
+  <script type="module" crossorigin src="/assets/index-Bcft3mVg.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-DelYgzgk.css">
 </head>
 
@@ -30,48 +30,13 @@
     <!-- Mission -->
     <section id="mission">
         <h2>Our Mission</h2>
-        <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity,
-            richness, and
-            stories behind global cuisine. We believe that food is a powerful connector—it transcends borders, brings
-            people
-            together, and allows us to experience the essence of a culture from the comfort of our own kitchens.
-
-            Whether you’re a home cook looking to expand your culinary skills, a cultural explorer eager to dive into
-            international
-            traditions, or a health-conscious individual searching for nutritious and balanced meals, we are here to
-            guide and
-            inspire your journey. We offer a vibrant platform filled with authentic recipes, cultural insights,
-            nutritional
-            guidance, and modern twists on traditional dishes to make global cooking accessible and enjoyable for
-            everyone.
-
-            Our goal is not just to provide recipes, but to tell the stories behind them—how a simple dish from a
-            village in Italy,
-            a market in Thailand, or a street corner in Morocco carries generations of tradition, passion, and identity.
-            Each meal
-            is an invitation to learn, to taste, and to appreciate the beauty of our shared human experience through
-            food.
-
-            With thoughtfully curated content, interactive tools, and a supportive global community, we aim to empower
-            individuals
-            to cook with confidence, eat with intention, and explore with curiosity. We believe that by discovering what
-            people eat
-            around the world, we can also discover more about ourselves—our values, our creativity, and our place in a
-            global
-            society.
-
-            So whether you’re looking to prepare your first international dish or master the art of world cooking,
-            Global Recipe
-            Explorer is your passport to a lifetime of delicious adventures. Together, let’s transform everyday meals
-            into
-            unforgettable globalexperiences..</p>
+        <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity...
+        </p>
     </section>
 
     <!-- Dietary Filter -->
     <section id="filters">
         <h2>Find Recipes That Match Your Dietary Needs</h2>
-        <p>Select a dietary preference to explore meals that suit your lifestyle, health goals, or personal values.</p>
-
         <label for="dietFilter">Filter by Diet:</label>
         <select id="dietFilter" aria-label="Choose a dietary restriction to filter recipes">
             <option value="">Any</option>
@@ -84,10 +49,14 @@
             <option value="halal">Halal – Permissible under Islamic law</option>
             <option value="kosher">Kosher – In accordance with Jewish dietary laws</option>
         </select>
-
         <p class="filter-tip">Tip: You can also combine this filter with regional cuisines for more personalized
-            results!
-        </p>
+            results!</p>
+    </section>
+
+    <!-- Vegetarian Recipes Results -->
+    <section id="diet-results">
+        <h3>Diet-Based Recipes</h3>
+        <div id="dietary-recipes-container" class="recipe-grid"></div>
     </section>
 
     <!-- Country Dropdown -->
@@ -347,9 +316,16 @@
             <option value="countries/southafrica.html">SouthAfrica</option>
             <option value="countries/zambia.html">Zambia</option>
             <option value="countries/zimbabwe.html">Zimbabwe</option>
-
         </select>
         <button onclick="goToCountry()">Go</button>
+    </section>
+
+    <!-- Country Info Results -->
+    <section id="country-info">
+        <h3>Country Information</h3>
+        <div id="country-details"></div>
+        <div id="country-facts"></div>
+        <div id="country-recipes" class="recipe-grid"></div>
     </section>
 
     <!-- Recipe Cards Placeholder -->
@@ -366,7 +342,9 @@
         <img src="/assets/image-BCzko3Wd.png" alt="Ad 4">
     </section>
 
-    <!-- Scripts -->
+    <!-- Scripts -->
+
+    <!-- Custom Scripts -->
     <script>
         function goToCountry() {
             const dropdown = document.getElementById('countryDropdown');
@@ -378,6 +356,7 @@
             }
         }
     </script>
+
 </body>
 
 </html>
