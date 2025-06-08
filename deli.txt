@@ -13,3 +13,12 @@ Deploying to Netlify
 Update your Netlify settings to:
 Build command: vite build
 Publish directory: build
+
+--------------------------------------------------------------------|
+                                                                    |
+Task: Created user interface (to be chnaged every week)             |
+Source: https://github.com/Ethem-Deli/Global-Recipe-Explorer        |
+Site: https://global-recipe-explorer-deli.netlify.app/              |
+                                                                    |
+                                                                    |
+--------------------------------------------------------------------|
