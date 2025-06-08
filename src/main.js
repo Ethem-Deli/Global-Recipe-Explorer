@@ -1,5 +1,5 @@
 import './js/home.mjs';
-import './css/styles.css';
+import '../src/css/styles.css';
 
 const dietFilter = document.getElementById('dietFilter');
 const weeklyBtn = document.getElementById('weeklyBtn');
