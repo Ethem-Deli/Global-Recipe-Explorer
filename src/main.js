@@ -1,9 +1,9 @@
-//src/main.js
 import './js/home.mjs';
 import './css/styles.css';
 
 const dietFilter = document.getElementById('dietFilter');
 const weeklyBtn = document.getElementById('weeklyBtn');
+const countryDropdown = document.getElementById('countryDropdown');
 
 if (dietFilter) {
   dietFilter.addEventListener('change', () => {
@@ -14,6 +14,27 @@ if (dietFilter) {
 
 if (weeklyBtn) {
   weeklyBtn.addEventListener('click', () => fetchRecipes('', 7));
+}
+const countryFilter = document.getElementById('countryFilter');
+
+if (countryFilter) {
+  countryFilter.addEventListener('change', () => {
+    const country = countryFilter.value;
+    if (country) {
+      fetchCountryInfo(country);
+      fetchCountryRecipes(country);
+    }
+  });
+}
+
+if (countryDropdown) {
+  countryDropdown.addEventListener('change', () => {
+    const country = countryDropdown.value;
+    if (country) {
+      fetchCountryInfo(country);
+      fetchCountryRecipes(country);
+    }
+  });
 }
 
 function fetchRecipes(diet = '', count = 1) {
@@ -67,3 +88,46 @@ window.saveFavorite = function (recipeId) {
 document.querySelector('.hamburger')?.addEventListener('click', () => {
   document.getElementById('menu')?.classList.toggle('show');
 });
+
+function fetchCountryInfo(countryName) {
+  fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+    .then(res => res.json())
+    .then(data => {
+      const country = data[0];
+      const details = document.getElementById('country-details');
+      details.innerHTML = `
+        <h4>${country.name.common}</h4>
+        <img src="${country.flags.png}" alt="${country.name.common}" width="200">
+        <p><strong>Capital:</strong> ${country.capital}</p>
+        <p><strong>Region:</strong> ${country.region}</p>
+        <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+      `;
+    })
+    .catch(err => console.error('Error loading country info:', err));
+}
+
+function fetchCountryRecipes(country) {
+  const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
+  const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${country}&number=6&apiKey=${apiKey}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('country-recipes');
+      container.innerHTML = '';
+      container.style.display = 'grid';
+      container.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      container.style.gap = '1.5rem';
+
+      data.results.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'recipe-card';
+        card.innerHTML = `
+          <h3>${r.title}</h3>
+          <img src="${r.image}" alt="${r.title}" width="100%">
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Error loading country recipes:', err));
+}

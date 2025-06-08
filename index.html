@@ -50,28 +50,23 @@
         <button id="weeklyBtn">Generate Weekly Recipes</button>
     </section>
 
-    <!-- Diet-based Recipes -->
-    <section id="diet-results">
-        <h3>Diet-Based Recipes</h3>
-        <div id="dietary-recipes-container" class="recipe-grid"></div>
-    </section>
-
     <!-- Recipe Results -->
     <section id="recipes">
         <div class="recipe-card animate__animated animate__fadeInUp">Loading recipes...</div>
     </section>
 
-    <!-- Country Select -->
-    <section id="country-select">
-        <h2>Explore by Country</h2>
-        <label for="countryDropdown">Choose a Country:</label>
-        <select id="countryDropdown">
-            <option value="">-- Select a country --</option>
-            <option value="countries/aruba.html">Aruba</option>
-            <option value="countries/afghanistan.html">Afghanistan</option>
-            <option value="countries/zimbabwe.html">Zimbabwe</option>
+    <section id="country-filters">
+        <h2>Country-filters</h2>
+        <select id="countryFilter">
+            <option value="">-- Select Country --</option>
+            <option value="aruba">Aruba</option>
+            <option value="afghanistan">Afghanistan</option>
+            <option value="zimbabwe">Zimbabwe</option>
         </select>
-        <button onclick="goToCountry()">Load</button>
+    </section>
+
+    <section id="CountryRecipe">
+        <div id="country-recipes" class="recipe-grid"></div>
     </section>
 
     <!-- Country Info -->
@@ -80,12 +75,6 @@
         <div id="country-details"></div>
         <div id="country-facts"></div>
         <div id="country-recipes" class="recipe-grid"></div>
-    </section>
-
-    <!-- Country Flag Grid -->
-    <section id="flagSection">
-        <h2>Country Flags</h2>
-        <div id="flagGrid" class="flag-grid"></div>
     </section>
 
     <!-- Ads -->
