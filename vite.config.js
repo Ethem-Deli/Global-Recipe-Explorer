@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: 'https://github.com/Ethem-Deli/Global-Recipe-Explorer',
+    base: '/Global-Recipe-Explorer/',
 });
+//base: 'https://github.com/Ethem-Deli/Global-Recipe-Explorer',
