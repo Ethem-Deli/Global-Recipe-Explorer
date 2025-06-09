@@ -304,3 +304,41 @@ section {
     text-decoration: none;
     color: #0077cc;
 }
+
+#search-wrapper input,
+#search-wrapper button {
+    padding: 0.75em;
+    font-size: 1rem;
+    max-width: 300px;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#search-wrapper button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+#search-wrapper button:hover {
+    background-color: #ff0040;
+}
+#blogilates-wrapper {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    max-width: 1200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#blogilates-wrapper select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 1rem;
+}

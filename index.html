@@ -32,6 +32,14 @@
         </p>
     </section>
 
+    <!-- Recipe Search -->
+    <section class="content-box" id="search-wrapper">
+        <h2>Search Recipes by Keyword</h2>
+        <input type="text" id="searchInput" placeholder="Enter recipe name..." />
+        <button id="searchBtn">Search</button>
+        <div id="search-results" class="recipe-grid"></div>
+    </section>
+
     <!-- Diet Filter + Recipes -->
     <section class="content-box" id="filter-recipes-wrapper">
         <h2>Dietary Filters & Recipes</h2>
@@ -53,6 +61,20 @@
         <button id="weeklyBtn">Generate Weekly Recipes</button>
         <!-- Optionally display weekly recipes inside the same workout recipes grid -->
         <div id="recipes"></div>
+    </section>
+
+    <section id="blogilates-wrapper">
+        <h2>Blogilates Recipes</h2>
+        <label for="categorySelect">Choose a category:</label>
+        <select id="categorySelect">
+            <option value="">-- Select Category --</option>
+            <option value="recipe-index">All</option>
+            <option value="recipe-index/breakfast">Breakfast</option>
+            <option value="recipe-index/lunch">Lunch</option>
+            <option value="recipe-index/dinner">Dinner</option>
+            <option value="recipe-index/snacks">Snacks</option>
+            <option value="recipe-index/dessert">Dessert</option>
+        </select>
     </section>
 
     <!-- Country Filter + Popular Recipes -->
@@ -154,20 +176,8 @@
         <div id="country-details"></div>
     </section>
 
-    <section>
-        <h2>Blogilates Recipes</h2>
-        <label for="categorySelect">Choose a category:</label>
-        <select id="categorySelect">
-            <option value="recipe-index">All</option>
-            <option value="recipe-index/breakfast">Breakfast</option>
-            <option value="recipe-index/lunch">Lunch</option>
-            <option value="recipe-index/dinner">Dinner</option>
-            <option value="recipe-index/snacks">Snacks</option>
-            <option value="recipe-index/dessert">Dessert</option>
-        </select>
-        <div id="blogilates-recipes" class="recipe-container"></div>
-    </section>
-      
+
+
     <!-- optional 
     <section>
         <h2>Explore Blogilates Recipes by Category</h2>

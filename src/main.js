@@ -4,6 +4,9 @@ import '../src/css/styles.css';
 const dietFilter = document.getElementById('dietFilter');
 const weeklyBtn = document.getElementById('weeklyBtn');
 const countryFilter = document.getElementById('countryFilter');
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+const categorySelect = document.getElementById('categorySelect');
 
 // Diet Filter
 if (dietFilter) {
@@ -21,7 +24,6 @@ if (weeklyBtn) {
 if (countryFilter) {
   countryFilter.addEventListener('change', () => {
     const country = countryFilter.value;
-    console.log('[Country Selected]:', country);
     if (country) {
       fetchCountryInfo(country);
       fetchCountryRecipes(country);
@@ -29,7 +31,26 @@ if (countryFilter) {
   });
 }
 
-// Fetch Random or Diet Recipes
+// Blogilates Recipe Category Dropdown
+if (categorySelect) {
+  categorySelect.addEventListener('change', () => {
+    const selected = categorySelect.value;
+    if (selected) {
+      const url = `https://www.blogilates.com/category/${selected}/`;
+      window.open(url, '_blank');
+    }
+  });
+}
+
+// Recipe Search
+if (searchBtn && searchInput) {
+  searchBtn.addEventListener('click', () => {
+    const keyword = searchInput.value.trim();
+    if (keyword) searchRecipes(keyword);
+  });
+}
+
+// Fetch Recipes by diet or random
 function fetchRecipes(diet = '', count = 1) {
   const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
   const url = `https://api.spoonacular.com/recipes/random?number=${count}&tags=${diet}&apiKey=${apiKey}&addRecipeNutrition=true`;
@@ -40,7 +61,7 @@ function fetchRecipes(diet = '', count = 1) {
     .catch(err => console.error('Error fetching recipes:', err));
 }
 
-// Render Recipes
+// Render recipes
 function renderRecipes(recipes) {
   const container = document.getElementById('recipes');
   if (!container) return;
@@ -67,7 +88,7 @@ function renderRecipes(recipes) {
   });
 }
 
-// Save Favorites
+// Save favorite recipe to localStorage
 window.saveFavorite = id => {
   const favs = JSON.parse(localStorage.getItem('favorites')) || [];
   if (!favs.includes(id)) {
@@ -77,14 +98,13 @@ window.saveFavorite = id => {
   }
 };
 
-// Mobile menu toggle
+// Toggle hamburger menu
 document.querySelector('.hamburger')?.addEventListener('click', () => {
   document.getElementById('menu')?.classList.toggle('show');
 });
 
-// Fetch Country Info
+// Fetch country info from REST Countries API
 function fetchCountryInfo(name) {
-  console.log('[Fetch Country Info]:', name);
   fetch(`https://restcountries.com/v3.1/name/${name}`)
     .then(res => res.json())
     .then(data => {
@@ -102,8 +122,7 @@ function fetchCountryInfo(name) {
     .catch(err => console.error('Error loading country info:', err));
 }
 
-
-// Fetch Country Recipes
+// Fetch recipes by cuisine mapped from selected country
 function fetchCountryRecipes(country) {
   const cuisineMap = {
     afghanistan: 'middle eastern',
@@ -192,22 +211,15 @@ function fetchCountryRecipes(country) {
     zimbabwe: 'african'
   };
 
-  const cuisine = cuisineMap[country.toLowerCase().replace(/\s+/g, '')] || 'world';
-  console.log('[Fetch Recipes for Country]: cuisine =', cuisine);
-
+  const cuisineKey = country.toLowerCase().replace(/\s+/g, '');
+  const cuisine = cuisineMap[cuisineKey] || 'world';
   const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
   const container = document.getElementById('country-recipes');
-  if (!container) {
-    console.error('[ERROR] Missing container with id "country-recipes"');
-    return;
-  }
+  if (!container) return;
 
-  fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=6&apiKey=${apiKey}`
-  )
+  fetch(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=6&apiKey=${apiKey}`)
     .then(res => res.json())
     .then(data => {
-      console.log('[Country Recipes Data]:', data);
       container.innerHTML = '';
       if (!data.results?.length) {
         container.innerHTML = '<p>No recipes found for this country.</p>';
@@ -224,4 +236,33 @@ function fetchCountryRecipes(country) {
       });
     })
     .catch(err => console.error('Error loading country recipes:', err));
+}
+
+// Search by keyword
+function searchRecipes(keyword) {
+  const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
+  const url = `https://api.spoonacular.com/recipes/complexSearch?query=${keyword}&number=6&apiKey=${apiKey}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('search-results');
+      container.innerHTML = '';
+
+      if (!data.results?.length) {
+        container.innerHTML = '<p>No recipes found.</p>';
+        return;
+      }
+
+      data.results.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'recipe-card';
+        card.innerHTML = `
+          <h3>${r.title}</h3>
+          <img src="${r.image}" alt="${r.title}" width="100%">
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Error searching recipes:', err));
 }
