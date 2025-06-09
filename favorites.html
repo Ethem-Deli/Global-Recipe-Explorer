@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Recipes</title>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">Global Recipe Explorer</a>
+            </div>
+            <div class="hamburger">&#9776;</div>
+            <ul id="menu" class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favorites.html" class="active">Favorites</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-box">
+        <h2>My Favorite Recipes</h2>
+        <div id="favorites-list" class="recipe-grid">
+            <p>Loading favorites...</p>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/favorites.js"></script>
+</body>
+
+</html>

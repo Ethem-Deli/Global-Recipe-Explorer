@@ -290,7 +290,7 @@ section {
     display: grid;
     gap: 1rem;
     margin-top: 1rem;
-    
+
 }
 
 .recipe-card {
@@ -326,6 +326,7 @@ section {
 #search-wrapper button:hover {
     background-color: #ff0040;
 }
+
 #blogilates-wrapper {
     background: white;
     padding: 2rem;
