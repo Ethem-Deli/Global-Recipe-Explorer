@@ -285,3 +285,22 @@ section {
 #country-info-wrapper {
     margin-top: 1.5em;
 }
+
+.recipe-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.recipe-card {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.recipe-card a {
+    text-decoration: none;
+    color: #0077cc;
+}
