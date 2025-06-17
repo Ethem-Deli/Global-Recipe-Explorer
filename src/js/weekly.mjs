@@ -1,3 +1,5 @@
+import { fetchRandomRecipe, getRecipeById } from './api.js';
+
 export async function getWeeklyRecipes() {
     const categories = ["italian", "mexican", "indian", "thai", "french"];
     const promises = categories.map(cuisine => searchRecipes({ cuisine }));
@@ -47,4 +49,34 @@ function getWeeklyRecipe() {
         fetchRecipes('', 1);
         localStorage.setItem('weeklyGenerated', now);
     }
-  }
+}
+async function loadWeeklyRecipe() {
+    const key = 'weeklyRecipe';
+    const prev = JSON.parse(localStorage.getItem(key)) || {};
+    const now = Date.now();
+    const weekMs = 7 * 24 * 60 * 60 * 1000;
+
+    if (!prev.timestamp || now - prev.timestamp > weekMs) {
+        const data = await fetchRandomRecipe();
+        const recipe = data.meals[0];
+        prev.id = recipe.idMeal;
+        prev.timestamp = now;
+        localStorage.setItem(key, JSON.stringify(prev));
+        displayWeekly(recipe);
+    } else {
+        const data = await getRecipeById(prev.id);
+        displayWeekly(data.meals[0]);
+    }
+}
+
+function displayWeekly(r) {
+    const wk = document.getElementById('weekly-recipe');
+    wk.innerHTML = `
+      <h3>Weekly Pick</h3>
+      <img src="${r.strMealThumb}" alt="${r.strMeal}" />
+      <p>${r.strMeal}</p>
+      <button onclick="location.href='recipe.html?id=${r.idMeal}'">View Recipe</button>
+    `;
+}
+
+loadWeeklyRecipe();
