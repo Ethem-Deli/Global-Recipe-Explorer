@@ -8,17 +8,16 @@ async function fetchInfo(recipeId) {
     return res.json();
 }
 
-async function fetchRecipesForWeekly(count = 10) {
+async function fetchRecipesForWeekly(count = 7) {
     const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
     const url = `https://api.spoonacular.com/recipes/random?number=${count}&apiKey=${apiKey}`;
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            const container = document.getElementById('weekly-recipes');
-            renderRecipeCards(data.recipes, container);
-        })
-        .catch(err => console.error('Error fetching recipes:', err));
+    try {
+        const { recipes } = await (await fetch(url)).json();
+        const detailed = await Promise.all(recipes.map(r => fetchInfo(r.id)));
+        renderWeeklyRecipes(detailed);
+    } catch (e) { console.error(e); }
 }
+
 function renderWeeklyRecipes(recipes) {
     const container = document.getElementById('weekly-recipes');
     container.innerHTML = '';
