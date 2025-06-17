@@ -56,9 +56,9 @@ function fetchRecipes(diet = '', count = 1) {
   const url = `https://api.spoonacular.com/recipes/random?number=${count}&tags=${diet}&apiKey=${apiKey}&addRecipeNutrition=true`;
 
   fetch(url)
-    .then(res => res.json())
-    .then(data => renderRecipes(data.recipes))
-    .catch(err => console.error('Error fetching recipes:', err));
+    .then((res) => res.json())
+    .then((data) => renderRecipes(data.recipes))
+    .catch((err) => console.error('Error fetching recipes:', err));
 }
 
 // Render recipes
@@ -67,11 +67,17 @@ function renderRecipes(recipes) {
   if (!container) return;
   container.innerHTML = '';
 
-  recipes.forEach(r => {
-    const calories = r.nutrition?.nutrients.find(n => n.name === 'Calories')?.amount || 'N/A';
-    const protein = r.nutrition?.nutrients.find(n => n.name === 'Protein')?.amount || 'N/A';
-    const fat = r.nutrition?.nutrients.find(n => n.name === 'Fat')?.amount || 'N/A';
-    const carbs = r.nutrition?.nutrients.find(n => n.name === 'Carbohydrates')?.amount || 'N/A';
+  recipes.forEach((r) => {
+    const calories =
+      r.nutrition?.nutrients.find((n) => n.name === 'Calories')?.amount ||
+      'N/A';
+    const protein =
+      r.nutrition?.nutrients.find((n) => n.name === 'Protein')?.amount || 'N/A';
+    const fat =
+      r.nutrition?.nutrients.find((n) => n.name === 'Fat')?.amount || 'N/A';
+    const carbs =
+      r.nutrition?.nutrients.find((n) => n.name === 'Carbohydrates')?.amount ||
+      'N/A';
 
     const card = document.createElement('div');
     card.className = 'recipe-card';
@@ -89,7 +95,7 @@ function renderRecipes(recipes) {
 }
 
 // Save favorite recipe to localStorage
-window.saveFavorite = id => {
+window.saveFavorite = (id) => {
   const favs = JSON.parse(localStorage.getItem('favorites')) || [];
   if (!favs.includes(id)) {
     favs.push(id);
@@ -106,8 +112,8 @@ document.querySelector('.hamburger')?.addEventListener('click', () => {
 // Fetch country info from REST Countries API
 function fetchCountryInfo(name) {
   fetch(`https://restcountries.com/v3.1/name/${name}`)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const c = data[0];
       const details = document.getElementById('country-details');
       if (!details) return;
@@ -119,7 +125,7 @@ function fetchCountryInfo(name) {
         <p><strong>Population:</strong> ${c.population.toLocaleString()}</p>
       `;
     })
-    .catch(err => console.error('Error loading country info:', err));
+    .catch((err) => console.error('Error loading country info:', err));
 }
 
 // Fetch recipes by cuisine mapped from selected country
@@ -208,7 +214,7 @@ function fetchCountryRecipes(country) {
     venezuela: 'latin american',
     vietnam: 'vietnamese',
     yemen: 'middle eastern',
-    zimbabwe: 'african'
+    zimbabwe: 'african',
   };
 
   const cuisineKey = country.toLowerCase().replace(/\s+/g, '');
@@ -217,15 +223,17 @@ function fetchCountryRecipes(country) {
   const container = document.getElementById('country-recipes');
   if (!container) return;
 
-  fetch(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=6&apiKey=${apiKey}`)
-    .then(res => res.json())
-    .then(data => {
+  fetch(
+    `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=6&apiKey=${apiKey}`,
+  )
+    .then((res) => res.json())
+    .then((data) => {
       container.innerHTML = '';
       if (!data.results?.length) {
         container.innerHTML = '<p>No recipes found for this country.</p>';
         return;
       }
-      data.results.forEach(r => {
+      data.results.forEach((r) => {
         const card = document.createElement('div');
         card.className = 'recipe-card';
         card.innerHTML = `
@@ -235,7 +243,7 @@ function fetchCountryRecipes(country) {
         container.appendChild(card);
       });
     })
-    .catch(err => console.error('Error loading country recipes:', err));
+    .catch((err) => console.error('Error loading country recipes:', err));
 }
 
 // Search by keyword
@@ -244,8 +252,8 @@ function searchRecipes(keyword) {
   const url = `https://api.spoonacular.com/recipes/complexSearch?query=${keyword}&number=6&apiKey=${apiKey}`;
 
   fetch(url)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const container = document.getElementById('search-results');
       container.innerHTML = '';
 
@@ -254,7 +262,7 @@ function searchRecipes(keyword) {
         return;
       }
 
-      data.results.forEach(r => {
+      data.results.forEach((r) => {
         const card = document.createElement('div');
         card.className = 'recipe-card';
         card.innerHTML = `
@@ -264,11 +272,11 @@ function searchRecipes(keyword) {
         container.appendChild(card);
       });
     })
-    .catch(err => console.error('Error searching recipes:', err));
+    .catch((err) => console.error('Error searching recipes:', err));
 }
 
 // Redirect to detail page
-window.viewRecipe = id => {
+window.viewRecipe = (id) => {
   localStorage.setItem('selectedRecipeId', id);
   window.location.href = 'recipe.html';
 };
