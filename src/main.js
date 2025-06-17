@@ -1,4 +1,3 @@
-import { renderRecipeCards, displayWeeklyRecipe } from './js/ui.mjs';
 import './js/home.mjs';
 import '../src/css/styles.css';
 import './js/weekly.mjs';
