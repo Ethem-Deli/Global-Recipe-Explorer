@@ -77,20 +77,3 @@ function displayWeekly(r) {
 
 // Initialize on load
 loadWeeklyRecipe();
-async function loadWeeklyRecipe() {
-    const key = 'weeklyRecipe';
-    const prev = JSON.parse(localStorage.getItem(key)) || {};
-    const now = Date.now();
-    const weekMs = 7 * 24 * 60 * 60 * 1000;
-
-    if (!prev.timestamp || now - prev.timestamp > weekMs) {
-        // Fetch new weekly recipe
-        const data = await fetchRandomRecipe();
-        const recipe = data.meals[0];
-        localStorage.setItem(key, JSON.stringify({ id: recipe.idMeal, timestamp: now }));
-        displayWeeklyRecipe(recipe);
-    } else {
-        const data = await getRecipeById(prev.id);
-        displayWeeklyRecipe(data.meals[0]);
-    }
-}
