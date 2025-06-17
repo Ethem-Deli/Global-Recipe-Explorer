@@ -1,4 +1,4 @@
-import { getRecipeById } from './api.js';
+import { getRecipeById } from './api.mjs';
 
 function getIngredients(recipe) {
     return Array.from({ length: 20 })
@@ -6,15 +6,23 @@ function getIngredients(recipe) {
             const ing = recipe[`strIngredient${i + 1}`];
             const meas = recipe[`strMeasure${i + 1}`];
             return ing ? `${ing} — ${meas}` : null;
-        }).filter(Boolean);
+        })
+        .filter(Boolean);
 }
 
 async function load() {
     const id = new URLSearchParams(location.search).get('id');
-    if (!id) return document.getElementById('recipe-detail').textContent = 'No recipe ID.';
+    if (!id) {
+        document.getElementById('recipe-detail').textContent = 'No recipe ID.';
+        return;
+    }
+
     const data = await getRecipeById(id);
     const r = data.meals?.[0];
-    if (!r) return document.getElementById('recipe-detail').textContent = 'Recipe not found.';
+    if (!r) {
+        document.getElementById('recipe-detail').textContent = 'Recipe not found.';
+        return;
+    }
 
     document.getElementById('recipe-detail').innerHTML = `
     <h2>${r.strMeal}</h2>
@@ -33,7 +41,9 @@ async function load() {
 
 async function loadCountryFacts(area) {
     try {
-        const res = await fetch(`https://restcountries.com/v3.1/name/${area}?fields=capital,region,population,flags`);
+        const res = await fetch(
+            `https://restcountries.com/v3.1/name/${area}?fields=capital,region,population,flags`
+        );
         const [c] = await res.json();
         document.getElementById('country-facts').innerHTML = `
       <h3>🇺🇳 From ${area}</h3>
