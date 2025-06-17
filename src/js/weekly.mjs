@@ -11,7 +11,7 @@ const weeklyBtn = document.getElementById('weeklyBtn');
 weeklyBtn.addEventListener('click', () => fetchRecipes('', 7));
 
 function fetchRecipes(diet = '', count = 1) {
-    const apiKey = 'YOUR_SPOONACULAR_API_KEY';
+    const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
     const url = `https://api.spoonacular.com/recipes/random?number=${count}&tags=${diet}&apiKey=${apiKey}`;
 
     fetch(url)
