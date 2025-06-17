@@ -39,3 +39,12 @@ function renderRecipes(recipes) {
         container.appendChild(card);
     });
 }
+function getWeeklyRecipe() {
+    const lastGenerated = localStorage.getItem('weeklyGenerated');
+    const now = new Date().toISOString().split('T')[0];
+
+    if (lastGenerated !== now) {
+        fetchRecipes('', 1);
+        localStorage.setItem('weeklyGenerated', now);
+    }
+  }

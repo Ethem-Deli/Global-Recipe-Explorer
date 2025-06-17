@@ -266,3 +266,26 @@ function searchRecipes(keyword) {
     })
     .catch(err => console.error('Error searching recipes:', err));
 }
+
+function renderRecipes(recipes) {
+  const container = document.getElementById('recipes');
+  if (!container) return;
+  container.innerHTML = '';
+
+  recipes.forEach(r => {
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+    card.innerHTML = `
+      <span class="favorite-btn" onclick="saveFavorite(${r.id})">❤️</span>
+      <h3>${r.title}</h3>
+      <img src="${r.image}" alt="${r.title}" width="100%">
+      <button onclick="viewRecipe(${r.id})">View Details</button>
+    `;
+    container.appendChild(card);
+  });
+}
+// Redirect to detail page
+window.viewRecipe = id => {
+  localStorage.setItem('selectedRecipeId', id);
+  window.location.href = 'recipe.html';
+};
