@@ -1,4 +1,3 @@
-// src/js/render.js
 export function renderRecipes(containerId, recipes) {
   const container = document.getElementById(containerId);
   if (!container) return;

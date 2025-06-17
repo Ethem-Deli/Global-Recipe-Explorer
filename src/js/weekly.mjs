@@ -1,55 +1,49 @@
 import { fetchRandomRecipe, getRecipeById } from './api.js';
 
-export async function getWeeklyRecipes() {
-    const categories = ["italian", "mexican", "indian", "thai", "french"];
-    const promises = categories.map(cuisine => searchRecipes({ cuisine }));
-    const results = await Promise.all(promises);
-    return results.flat().slice(0, 7);
-}
-
-const weeklyBtn = document.getElementById('weeklyBtn');
-weeklyBtn.addEventListener('click', () => fetchRecipes('', 7));
-
-function fetchRecipes(diet = '', count = 1) {
+async function fetchInfo(recipeId) {
     const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
-    const url = `https://api.spoonacular.com/recipes/random?number=${count}&tags=${diet}&apiKey=${apiKey}`;
-
-    fetch(url)
-        .then(res => res.json())
-        .then(data => renderRecipes(data.recipes))
-        .catch(err => console.error('Error fetching recipes:', err));
+    const res = await fetch(
+        `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`
+    );
+    return res.json();
 }
 
-function renderRecipes(recipes) {
-    const container = document.getElementById('recipes');
+async function fetchRecipesForWeekly(count = 7) {
+    const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
+    const url = `https://api.spoonacular.com/recipes/random?number=${count}&apiKey=${apiKey}`;
+    try {
+        const { recipes } = await (await fetch(url)).json();
+        const detailed = await Promise.all(recipes.map(r => fetchInfo(r.id)));
+        renderWeeklyRecipes(detailed);
+    } catch (e) { console.error(e); }
+}
+
+function renderWeeklyRecipes(recipes) {
+    const container = document.getElementById('weekly-recipes');
     container.innerHTML = '';
 
-    recipes.forEach(recipe => {
+    recipes.forEach(r => {
+        const nutrients = r.nutrition.nutrients.reduce((acc, n) => {
+            if (['Calories', 'Protein', 'Fat', 'Carbohydrates'].includes(n.name))
+                acc[n.name] = `${n.amount}${n.unit}`;
+            return acc;
+        }, {});
+
         const card = document.createElement('div');
         card.className = 'recipe-card';
-
         card.innerHTML = `
-      <span class="favorite-btn" onclick="saveFavorite(${recipe.id})">❤️</span>
-      <h3>${recipe.title}</h3>
-      <img src="${recipe.image}" alt="${recipe.title}" width="100%">
-      <p><strong>Calories:</strong> ${recipe.nutrition?.nutrients?.find(n => n.name === 'Calories')?.amount || 'N/A'}</p>
-      <p><strong>Protein:</strong> ${recipe.nutrition?.nutrients?.find(n => n.name === 'Protein')?.amount || 'N/A'}g</p>
-      <p><strong>Fat:</strong> ${recipe.nutrition?.nutrients?.find(n => n.name === 'Fat')?.amount || 'N/A'}g</p>
-      <p><strong>Carbs:</strong> ${recipe.nutrition?.nutrients?.find(n => n.name === 'Carbohydrates')?.amount || 'N/A'}g</p>
+      <span class="favorite-btn" onclick="saveFavorite(${r.id})">❤️</span>
+      <h3>${r.title}</h3>
+      <img src="${r.image}" alt="${r.title}" />
+      <p><strong>Calories:</strong> ${nutrients.Calories}</p>
+      <p><strong>Protein:</strong> ${nutrients.Protein}</p>
+      <p><strong>Fat:</strong> ${nutrients.Fat}</p>
+      <p><strong>Carbs:</strong> ${nutrients.Carbohydrates}</p>
     `;
-
         container.appendChild(card);
     });
 }
-function getWeeklyRecipe() {
-    const lastGenerated = localStorage.getItem('weeklyGenerated');
-    const now = new Date().toISOString().split('T')[0];
 
-    if (lastGenerated !== now) {
-        fetchRecipes('', 1);
-        localStorage.setItem('weeklyGenerated', now);
-    }
-}
 async function loadWeeklyRecipe() {
     const key = 'weeklyRecipe';
     const prev = JSON.parse(localStorage.getItem(key)) || {};
@@ -59,9 +53,10 @@ async function loadWeeklyRecipe() {
     if (!prev.timestamp || now - prev.timestamp > weekMs) {
         const data = await fetchRandomRecipe();
         const recipe = data.meals[0];
-        prev.id = recipe.idMeal;
-        prev.timestamp = now;
-        localStorage.setItem(key, JSON.stringify(prev));
+        localStorage.setItem(key, JSON.stringify({
+            id: recipe.idMeal,
+            timestamp: now
+        }));
         displayWeekly(recipe);
     } else {
         const data = await getRecipeById(prev.id);
@@ -71,12 +66,43 @@ async function loadWeeklyRecipe() {
 
 function displayWeekly(r) {
     const wk = document.getElementById('weekly-recipe');
+    if (!wk) return;
     wk.innerHTML = `
-      <h3>Weekly Pick</h3>
-      <img src="${r.strMealThumb}" alt="${r.strMeal}" />
-      <p>${r.strMeal}</p>
-      <button onclick="location.href='recipe.html?id=${r.idMeal}'">View Recipe</button>
-    `;
+    <h3>Weekly Pick</h3>
+    <img src="${r.strMealThumb}" alt="${r.strMeal}">
+    <p>${r.strMeal}</p>
+    <button onclick="location.href='recipe.html?id=${r.idMeal}'">View Recipe</button>
+  `;
 }
 
+// Initialize on load
 loadWeeklyRecipe();
+async function loadWeeklyRecipe() {
+    const key = 'weeklyRecipe';
+    const prev = JSON.parse(localStorage.getItem(key)) || {};
+    const now = Date.now();
+    const weekMs = 7 * 24 * 60 * 60 * 1000;
+
+    if (!prev.timestamp || now - prev.timestamp > weekMs) {
+        // Fetch new weekly recipe
+        const data = await fetchRandomRecipe();
+        const recipe = data.meals[0];
+        localStorage.setItem(key, JSON.stringify({ id: recipe.idMeal, timestamp: now }));
+        displayWeeklyRecipe(recipe);
+    } else {
+        const data = await getRecipeById(prev.id);
+        displayWeeklyRecipe(data.meals[0]);
+    }
+}
+
+function fetchRecipesForWeekly(count = 7) {
+    const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
+    const url = `https://api.spoonacular.com/recipes/random?number=${count}&apiKey=${apiKey}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById('weekly-recipes');
+            renderRecipeCards(data.recipes, container);
+        })
+        .catch(err => console.error('Error fetching recipes:', err));
+}

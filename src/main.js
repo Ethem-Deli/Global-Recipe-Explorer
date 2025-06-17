@@ -1,5 +1,7 @@
+import { renderRecipeCards, displayWeeklyRecipe } from './js/ui.mjs';
 import './js/home.mjs';
 import '../src/css/styles.css';
+import './js/weekly.mjs';
 
 const dietFilter = document.getElementById('dietFilter');
 const weeklyBtn = document.getElementById('weeklyBtn');

@@ -1,4 +1,3 @@
-// src/js/recipe.mjs
 import { fetchRecipeById } from './api.mjs';
 
 (async function () {

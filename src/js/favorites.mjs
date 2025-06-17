@@ -1,4 +1,3 @@
-// src/js/favorites.mjs
 import { renderRecipes } from './render.js';
 
 window.addEventListener('DOMContentLoaded', () => {

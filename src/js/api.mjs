@@ -1,4 +1,3 @@
-// src/js/api.mjs
 const apiKey = 'f39143f6af2943898e57538f2d6d3de2';
 
 export async function fetchRecipes(diet = '', count = 1) {
