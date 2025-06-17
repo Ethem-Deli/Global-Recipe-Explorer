@@ -17,10 +17,8 @@ Publish directory: build
 --------------------------------------------------------------------|
                                                                     |
 Task: Created user interface (to be chnaged every week)             |
-Source: https://github.com/Ethem-Deli/Global-Recipe-Explorer        |
+Source: https://github.com/Ethem-Deli/Global-Recipe-Explorer.git    |
 Site: https://global-recipe-explorer-deli.netlify.app/              |
                                                                     |
                                                                     |
 --------------------------------------------------------------------|
-
-https://github.com/Ethem-Deli/Global-Recipe-Explorer.git
