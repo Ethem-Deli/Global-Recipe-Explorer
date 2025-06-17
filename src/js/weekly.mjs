@@ -1,4 +1,4 @@
-import { fetchRandomRecipe, getRecipeById } from './api.js';
+import { fetchRandomRecipe, getRecipeById } from './api.mjs';
 
 async function fetchInfo(recipeId) {
     const apiKey = 'f39143f6af2943898e57538f2d6d3de2';

@@ -114,3 +114,15 @@ export async function searchRecipes(keyword) {
     const data = await res.json();
     return data.results;
 }
+export async function fetchRandomRecipe() {
+    const url = 'https://www.themealdb.com/api/json/v1/1/random.php';
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
+export async function getRecipeById(id) {
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+    const data = await res.json();
+    return data;
+}
