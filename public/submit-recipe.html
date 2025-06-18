@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Recipe</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Submit a Recipe</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="shopping-list.html">Shopping List</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="recipeForm">
+            <input type="text" id="recipeName" placeholder="Recipe Name" required><br>
+            <textarea id="ingredients" placeholder="Ingredients (comma-separated)" required></textarea><br>
+            <textarea id="instructions" placeholder="Instructions" required></textarea><br>
+            <button type="submit">Submit Recipe</button>
+        </form>
+        <p id="submitMsg"></p>
+    </main>
+
+    <script type="module" src="../src/js/pages/submitRecipePage.js"></script>
+</body>
+
+</html>
