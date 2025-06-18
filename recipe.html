@@ -3,13 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recipe Detail | Global Recipe Explorer</title>
     <link rel="stylesheet" href="/src/css/styles.css" />
 </head>
 
 <body>
-    <div id="recipe-detail" class="container"></div>
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="logo">
+            <a href="/">Global Recipe Explorer</a>
+        </div>
+    </nav>
+
+    <main id="recipe-detail" class="container" tabindex="-1" aria-live="polite" aria-label="Recipe details">
+        <!-- Recipe details will be dynamically injected here -->
+    </main>
+
     <script type="module" src="/src/js/recipeDetail.js"></script>
 </body>
 

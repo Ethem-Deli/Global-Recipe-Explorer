@@ -14,6 +14,36 @@ Update your Netlify settings to:
 Build command: vite build
 Publish directory: build
 
+optional feature
+ Install Prettier
+ npm install --save-dev prettier
+then Create a .prettierrc in your project root with:
+{
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 80
+}
+ Format all files
+ npx prettier --write src/js
+----------------------------
+1:Install Husky & Lint-Staged
+npm install --save-dev husky lint-staged
+2.Add this to package.json:"lint-staged": {
+  "src/js/**/*.{js,mjs}": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}
+3. Initialize Husky:
+bash
+Copy
+Edit
+npx husky install
+4. Add a pre-commit hook:
+bash
+Copy
+Edit
+npx husky add .husky/pre-commit "npx lint-staged"
 --------------------------------------------------------------------|
                                                                     |
 Task: Created user interface (to be chnaged every week)             |

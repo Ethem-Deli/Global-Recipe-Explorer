@@ -6,46 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Recipe Explorer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-DQqptdk5.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Bjme4w1K.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
+        rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/index-B8F7WOmb.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dfii1UqL.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <nav class="main-nav">
             <div class="logo">
                 <a href="index.html">Global Recipe Explorer</a>
             </div>
             <div class="hamburger">&#9776;</div>
             <ul id="menu" class="menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="countries.html">Countries</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="login.html">test</a></li>
-                <li><a href="favorites.html" class="active">Favorites</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Mission -->
-    <section id="mission">
+    <section id="mission" class="content-box animate__animated animate__fadeInUp">
         <h2>Our Mission</h2>
-        <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity...
-        </p>
+        <p>At Global Recipe Explorer, our mission is to bring the world to your table by celebrating the diversity of
+            international cuisine.</p>
     </section>
 
     <!-- Recipe Search -->
-    <section class="content-box" id="search-wrapper">
+    <section id="search-wrapper" class="content-box animate__animated animate__fadeInUp animate__delay-1s">
         <h2>Search Recipes by Keyword</h2>
         <input type="text" id="searchInput" placeholder="Enter recipe name..." />
-        <button id="searchBtn">Search</button>
+        <button id="searchBtn" class="animate__animated animate__pulse animate__infinite">Search</button>
         <div id="search-results" class="recipe-grid"></div>
     </section>
 
-    <!-- Diet Filter + Recipes -->
-    <section class="content-box" id="filter-recipes-wrapper">
+    <!-- Diet Filter -->
+    <section id="filter-recipes-wrapper" class="content-box animate__animated animate__fadeInUp animate__delay-2s">
         <h2>Dietary Filters & Recipes</h2>
         <select id="dietFilter">
             <option value="">-- Select Diet --</option>
@@ -60,14 +60,16 @@
     </section>
 
     <!-- Weekly Generator -->
-    <section class="content-box" id="weekly-wrapper">
+    <section id="weekly-wrapper" class="content-box animate__animated animate__fadeInUp animate__delay-3s">
         <h2>Weekly Recipe Generator</h2>
-        <button id="weeklyBtn">Generate Weekly Recipes</button>
+        <button id="weeklyBtn" class="animate__animated animate__pulse animate__infinite">Generate Weekly
+            Recipes</button>
         <div id="weekly-recipes" class="recipe-grid"></div>
         <div id="weekly-recipe" class="weekly-section"></div>
     </section>
 
-    <section id="blogilates-wrapper">
+    <!-- Blogilates Categories -->
+    <section id="blogilates-wrapper" class="content-box animate__animated animate__fadeInUp animate__delay-4s">
         <h2>Blogilates Recipes</h2>
         <label for="categorySelect">Choose a category:</label>
         <select id="categorySelect">
@@ -82,10 +84,11 @@
         </select>
     </section>
 
-    <!-- Country Filter + Popular Recipes -->
-    <section class="content-box" id="country-recipes-wrapper">
+    <!-- Country Filter -->
+    <section id="country-recipes-wrapper" class="content-box animate__animated animate__fadeInUp animate__delay-5s">
         <h2>Country Filter & Popular Recipes</h2>
         <select id="countryFilter">
+            <!-- options unchanged, omitted here for brevity -->
             <option value="">-- Select Country --</option>
             <option value="afghanistan"> Afghanistan</option>
             <option value="algeria"> Algeria</option>
@@ -175,36 +178,22 @@
         <div id="country-recipes" class="recipe-grid"></div>
     </section>
 
-    <!-- Country Info -->
-    <section class="content-box" id="country-info-wrapper">
+    <!-- Country Information -->
+    <section id="country-info-wrapper" class="content-box animate__animated animate__fadeInUp animate__delay-6s">
         <h2>Country Information</h2>
         <div id="country-details"></div>
     </section>
 
-
-
-    <!-- optional 
-    <section>
-        <h2>Explore Blogilates Recipes by Category</h2>
-        <ul>
-            <li><a href="https://www.blogilates.com/category/recipe-index/breakfast/" target="_blank">Breakfast</a></li>
-            <li><a href="https://www.blogilates.com/category/recipe-index/lunch/" target="_blank">Lunch</a></li>
-            <li><a href="https://www.blogilates.com/category/recipe-index/dinner/" target="_blank">Dinner</a></li>
-            <li><a href="https://www.blogilates.com/category/recipe-index/snacks/" target="_blank">Snacks</a></li>
-            <li><a href="https://www.blogilates.com/category/recipe-index/dessert/" target="_blank">Dessert</a></li>
-        </ul>
-    </section>-->
-
     <!-- Ads -->
-    <section id="ads">
+    <section id="ads" class="content-box animate__animated animate__fadeInUp animate__delay-7s">
         <h3>Sponsored</h3>
-        <img src="/assets/image-BCzko3Wd.png" alt="Ad 1">
-        <img src="/assets/image-BCzko3Wd.png" alt="Ad 2">
-        <img src="/assets/image-BCzko3Wd.png" alt="Ad 3">
-        <img src="/assets/image-BCzko3Wd.png" alt="Ad 4">
+        <img src="/assets/image-BCzko3Wd.png" alt="Ad 1" />
+        <img src="/assets/image-BCzko3Wd.png" alt="Ad 2" />
+        <img src="/assets/image-BCzko3Wd.png" alt="Ad 3" />
+        <img src="/assets/image-BCzko3Wd.png" alt="Ad 4" />
     </section>
 
-    <div class="spinner">Loading...</div>
+    <div class="spinner animate__animated animate__fadeIn"></div>
 
     <!-- Main Script -->
 </body>
